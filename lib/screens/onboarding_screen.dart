@@ -11,10 +11,14 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
+        controller: _pageController,
         itemCount: contents.length,
         itemBuilder: (_, i) {
           return Stack(
@@ -51,29 +55,41 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           textAlign: TextAlign.center,
                         ),
                         Gap(60),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 20,
+                        GestureDetector(
+                          onTap: () {
+                            if (_currentPage < contents.length - 1) {
+                              _pageController.nextPage(
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            } else {
+                              // Handle action when reaching the last page
+                            }
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 20,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Next',
+                                  style: Styles.headLineStyle3
+                                      .copyWith(color: Colors.white),
+                                ),
+                                Gap(10),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                )
+                              ],
+                            ),
                           ),
-                          decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(8)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Next',
-                                style: Styles.headLineStyle3
-                                    .copyWith(color: Colors.white),
-                              ),
-                              Gap(10),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                              )
-                            ],
-                          ),
-                        )
+                        ),
                       ],
                     ),
                   ),
