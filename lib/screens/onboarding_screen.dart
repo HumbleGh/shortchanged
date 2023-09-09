@@ -11,33 +11,27 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        itemCount: 3,
-        itemBuilder: (_, i) {
-          return Stack(
-            children: [
-              SizedBox(
-                width: double.infinity,
-                child: Image.asset(
-                  'assets/images/Boy.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Expanded(
-                child: Positioned(
-                  child: Container(
-                    decoration: const BoxDecoration(color: Colors.blue),
-                    child: const Text(
-                      'Hey Man',
-                      style: TextStyle(color: Colors.white),
-                    ),
+        body: Stack(
+      alignment: AlignmentDirectional.topEnd,
+      children: [
+        Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  alignment: Alignment.topCenter,
+                  image: AssetImage(
+                    'assets/images/Boy.jpg',
                   ),
-                ),
-              )
-            ],
-          );
-        },
-      ),
-    );
+                  fit: BoxFit.fitWidth)),
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            decoration: const BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
+            height: 300,
+            width: double.infinity,
+          ),
+        ),
+      ],
+    ));
   }
 }
