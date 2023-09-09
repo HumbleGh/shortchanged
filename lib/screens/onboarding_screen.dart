@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_style.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -25,10 +27,26 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           alignment: Alignment.bottomCenter,
           child: Container(
             decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
             height: 300,
             width: double.infinity,
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: (20), horizontal: (20)),
+              child: Column(
+                children: [
+                  Text(
+                    'Education',
+                    style: Styles.headLineStyle1,
+                  ),
+                  Gap(10),
+                  Text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque porta feugiat tincidunt nunc, egestas semper sed aliquet. Diam d',
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ],
