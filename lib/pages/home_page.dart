@@ -9,13 +9,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       children: [
-        Container(
-          height: 500,
-          width: 200,
-          child: Image(
-            image: AssetImage('assets/images/allthree.png'),
+        const Expanded(
+          child: SizedBox(
+            height: 500,
+            width: 200,
+            child: Image(
+              image: AssetImage('assets/images/allthree.png'),
+            ),
           ),
         ),
         Text(
@@ -23,12 +25,41 @@ class HomePage extends StatelessWidget {
           style: Styles.headLineStyle1,
           textAlign: TextAlign.center,
         ),
-        Text(
+        const Text(
           'Lorem ipsum dolor sit amet consectetur\n adipiscing elit.'
           'Aenean neque porta feu',
           textAlign: TextAlign.center,
         ),
-        Gap(20),
+        const Gap(40),
+        Container(
+          padding: const EdgeInsets.symmetric(
+            vertical: 20,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: Text(
+            'Create Account',
+            textAlign: TextAlign.center,
+            style: Styles.headLineStyle3.copyWith(color: Colors.white),
+          ),
+        ),
+        const Gap(20),
+        Container(
+          padding: const EdgeInsets.symmetric(
+            vertical: 20,
+          ),
+          decoration: BoxDecoration(
+            border: Border.all(),
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: Text(
+            'Sign in',
+            textAlign: TextAlign.center,
+            style: Styles.headLineStyle3.copyWith(color: Colors.black),
+          ),
+        ),
       ],
     ));
   }
