@@ -154,7 +154,13 @@ class SignUpPage extends StatelessWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime.now().subtract(Duration.zero),
+                              lastDate: DateTime.now());
+                        },
                         icon: const Icon(Icons.calendar_month)),
                     border: const OutlineInputBorder(),
                     hintText: 'Enter your prefered username',
