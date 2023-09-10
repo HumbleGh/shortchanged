@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  String dropdownValue = 'Male';
   @override
   Widget build(BuildContext context) {
     Container(
@@ -125,20 +131,47 @@ class SignUpPage extends StatelessWidget {
             children: [
               Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: const Text('Gender')),
+                  child: const Text('Email*')),
               const Gap(5),
               Container(
+                height: 60,
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(
+                      width: 0.5,
+                    )),
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: TextField(
-                  decoration: InputDecoration(
-                    suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.arrow_drop_down)),
-                    border: const OutlineInputBorder(),
-                    hintText: 'Select your gender',
+                child: DropdownButton<String>(
+                  isExpanded: true,
+                  value: dropdownValue,
+                  icon: const Icon(Icons.arrow_drop_down),
+                  style: const TextStyle(
+                    color: Colors.white,
                   ),
+                  onChanged: (String? newVallue) {
+                    setState(() {
+                      dropdownValue = newVallue!;
+                    });
+                  },
+                  items: const [
+                    DropdownMenuItem<String>(
+                      value: 'Male',
+                      child: Text(
+                        'Male',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    DropdownMenuItem<String>(
+                      value: 'Female',
+                      child: Text(
+                        'Female',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+              )
             ],
           ),
           const Gap(20),
@@ -169,6 +202,7 @@ class SignUpPage extends StatelessWidget {
               ),
             ],
           ),
+          const Gap(20),
         ],
       )),
     );
