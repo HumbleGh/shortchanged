@@ -203,6 +203,11 @@ class _SignUpPageState extends State<SignUpPage> {
             ],
           ),
           const Gap(20),
+          Container(
+            height: 20,
+            width: 20,
+            decoration: const BoxDecoration(),
+          ),
         ],
       )),
     );
