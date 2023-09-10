@@ -135,7 +135,7 @@ class _SignUpPageState extends State<SignUpPage> {
               const Gap(5),
               Container(
                 height: 60,
-                margin: const EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 18),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     border: Border.all(
