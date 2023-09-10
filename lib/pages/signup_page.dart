@@ -141,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     border: Border.all(
                       width: 0.5,
                     )),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 18),
                 child: DropdownButton<String>(
                   isExpanded: true,
                   value: dropdownValue,
