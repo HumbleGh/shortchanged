@@ -7,6 +7,13 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      height: 50,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: Colors.black)),
+    );
     return Scaffold(
       body: SafeArea(
           child: ListView(
@@ -33,8 +40,8 @@ class SignUpPage extends StatelessWidget {
           Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
@@ -42,13 +49,15 @@ class SignUpPage extends StatelessWidget {
                       children: [
                         Text('First Name*'),
                         Gap(5),
-                        Container(
-                          height: 50,
+                        SizedBox(
                           width: 180,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: Colors.black)),
-                        )
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'John',
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                     Column(
@@ -56,71 +65,104 @@ class SignUpPage extends StatelessWidget {
                       children: [
                         Text('Last Name*'),
                         Gap(5),
-                        Container(
-                          height: 50,
+                        SizedBox(
                           width: 180,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: Colors.black)),
-                        )
+                          child: TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Doe',
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
-              Gap(20),
+              const Gap(20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text('Email*')),
-                  Gap(5),
+                      child: const Text('Username')),
+                  const Gap(5),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        border: Border.all(color: Colors.black)),
-                  )
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'Enter your prefered username',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const Gap(20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: const Text('Email*')),
+                  const Gap(5),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'example@gmail.com',
+                      ),
+                    ),
+                  ),
                 ],
               )
             ],
           ),
-          Gap(20),
+          const Gap(20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Text('Gender*')),
-              Gap(5),
+                  child: const Text('Gender')),
+              const Gap(5),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: Colors.black)),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.arrow_drop_down)),
+                    border: const OutlineInputBorder(),
+                    hintText: 'Select your gender',
+                  ),
+                ),
               ),
             ],
           ),
-          Gap(20),
+          const Gap(20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Text('Date of Birth*')),
-              Gap(5),
+                  child: const Text('Date of Birth')),
+              const Gap(5),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: Colors.black)),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: TextField(
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.calendar_month)),
+                    border: const OutlineInputBorder(),
+                    hintText: 'Enter your prefered username',
+                  ),
+                ),
               ),
             ],
-          )
+          ),
         ],
       )),
     );
