@@ -42,7 +42,7 @@ class SignInPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         border: Border.all(width: 0.5),
                         borderRadius: BorderRadius.circular(8)),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                     child: Row(
                       children: [
                         Image(image: AssetImage('assets/images/ghflag.png')),
@@ -51,17 +51,17 @@ class SignInPage extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    width: 250,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'John',
+                      ),
+                    ),
+                  )
                 ],
               ),
-              SizedBox(
-                width: 180,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'John',
-                  ),
-                ),
-              )
             ],
           ),
         )
