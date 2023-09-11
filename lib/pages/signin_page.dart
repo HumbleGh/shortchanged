@@ -10,7 +10,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      padding: EdgeInsets.only(bottom: 30.0),
+      padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 30.0),
       child: SafeArea(
         child: Column(
           children: [
