@@ -225,7 +225,7 @@ class _SignUpPageState extends State<SignUpPage> {
           const Gap(20),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 8),
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
             decoration: BoxDecoration(
                 color: Colors.blue, borderRadius: BorderRadius.circular(8)),
             child: MaterialButton(
@@ -238,7 +238,18 @@ class _SignUpPageState extends State<SignUpPage> {
                     fontSize: 18),
               ),
             ),
-          )
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Already have an account? '),
+              Text(
+                'Sign in',
+                style: TextStyle(color: Colors.blue),
+              )
+            ],
+          ),
+          const Gap(20),
         ],
       )),
     );
