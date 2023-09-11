@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/pages/signin_page.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -239,17 +240,25 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Already have an account? '),
-              Text(
-                'Sign in',
-                style: TextStyle(color: Colors.blue),
+              const Text('Already have an account? '),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignInPage()));
+                },
+                child: const Text(
+                  'Sign in',
+                  style: TextStyle(color: Colors.blue),
+                ),
               )
             ],
           ),
-          const Gap(20),
+          const Gap(40),
         ],
       )),
     );
