@@ -203,11 +203,42 @@ class _SignUpPageState extends State<SignUpPage> {
             ],
           ),
           const Gap(20),
-          Container(
-            height: 20,
-            width: 20,
-            decoration: const BoxDecoration(),
+          Row(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(left: 20),
+                height: 20,
+                width: 20,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.grey,
+                ),
+              ),
+              const Gap(8),
+              const Text('I have read and agree to the '),
+              const Text(
+                'Terms of Service',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ],
           ),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            margin: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+            child: MaterialButton(
+              onPressed: () {},
+              child: const Text(
+                'Create an Account',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
+              ),
+            ),
+          )
         ],
       )),
     );
