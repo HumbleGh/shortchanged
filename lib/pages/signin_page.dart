@@ -27,22 +27,25 @@ class SignInPage extends StatelessWidget {
             style: Styles.headLineStyle4,
           ),
         ),
-        const Gap(20),
+        const Gap(40),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Enter your Mobile Number'),
+              Text(
+                'Enter your Mobile Number',
+                style: Styles.textStyle,
+              ),
               const Gap(12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        border: Border.all(width: 0.5),
-                        borderRadius: BorderRadius.circular(8)),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                        border: Border.all(width: 1),
+                        borderRadius: BorderRadius.circular(4)),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 19),
                     child: Row(
                       children: [
                         Image(image: AssetImage('assets/images/ghflag.png')),
@@ -52,11 +55,11 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 250,
+                    width: 260,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'John',
+                        hintText: 'Mobile Number',
                       ),
                     ),
                   )
