@@ -8,67 +8,113 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: ListView(children: [
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          width: 150,
-          height: 150,
-          child: const Image(image: AssetImage('assets/images/Logo.png')),
-        ),
-        Text(
-          'Sign in to your Account',
-          style: Styles.headLineStyle1,
-          textAlign: TextAlign.center,
-        ),
-        Center(
-          child: Text(
-            'Welcome back, please enter your details.',
-            style: Styles.headLineStyle4,
-          ),
-        ),
-        const Gap(40),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Enter your Mobile Number',
-                style: Styles.textStyle,
+        body: Container(
+      padding: EdgeInsets.only(bottom: 30.0),
+      child: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              padding: const EdgeInsets.symmetric(horizontal: 0),
+              child: const Image(
+                image: AssetImage('assets/images/Logo.png'),
+                fit: BoxFit.cover,
               ),
-              const Gap(12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            Text(
+              'Sign in to your Account',
+              style: Styles.headLineStyle1,
+              textAlign: TextAlign.center,
+            ),
+            Center(
+              child: Text(
+                'Welcome back, please enter your details.',
+                style: Styles.headLineStyle4,
+              ),
+            ),
+            const Gap(40),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(width: 1),
-                        borderRadius: BorderRadius.circular(4)),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 19),
-                    child: Row(
-                      children: [
-                        Image(image: AssetImage('assets/images/ghflag.png')),
-                        const Gap(6),
-                        Icon(Icons.arrow_drop_down),
-                      ],
-                    ),
+                  Text(
+                    'Enter your Mobile Number',
+                    style: Styles.textStyle,
                   ),
-                  SizedBox(
-                    width: 260,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Mobile Number',
+                  const Gap(12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 1),
+                            borderRadius: BorderRadius.circular(4)),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 19),
+                        child: Row(
+                          children: [
+                            Image(
+                                image: AssetImage('assets/images/ghflag.png')),
+                            const Gap(6),
+                            Icon(Icons.arrow_drop_down),
+                          ],
+                        ),
                       ),
-                    ),
-                  )
+                      SizedBox(
+                        width: 260,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: 'Mobile Number',
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
-            ],
-          ),
-        )
-      ])),
-    );
+            ),
+            const Spacer(),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+              child: MaterialButton(
+                onPressed: () {},
+                child: const Text(
+                  'Create an Account',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Already have an account? '),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignInPage()));
+                  },
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 }
