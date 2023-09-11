@@ -36,7 +36,7 @@ class SignInPage extends StatelessWidget {
             ),
             const Gap(40),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,18 +52,18 @@ class SignInPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(width: 1),
                             borderRadius: BorderRadius.circular(4)),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 19),
-                        child: Row(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 19),
+                        child: const Row(
                           children: [
                             Image(
                                 image: AssetImage('assets/images/ghflag.png')),
-                            const Gap(6),
+                            Gap(6),
                             Icon(Icons.arrow_drop_down),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 260,
                         child: TextField(
                           decoration: InputDecoration(
