@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/pages/signup_page.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SignInPage extends StatelessWidget {
@@ -86,7 +87,7 @@ class SignInPage extends StatelessWidget {
               child: MaterialButton(
                 onPressed: () {},
                 child: const Text(
-                  'Create an Account',
+                  'Sign in',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -97,16 +98,16 @@ class SignInPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Already have an account? '),
+                const Text('Don\'t have an account? '),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignInPage()));
+                            builder: (context) => const SignUpPage()));
                   },
                   child: const Text(
-                    'Sign in',
+                    'Sign up',
                     style: TextStyle(color: Colors.blue),
                   ),
                 )
