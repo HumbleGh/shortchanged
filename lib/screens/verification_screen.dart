@@ -45,37 +45,41 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
+                      SizedBox(
                         height: 55,
                         width: 55,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 1),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Text(' '),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12))),
+                        ),
                       ),
-                      Container(
+                      SizedBox(
                         height: 55,
                         width: 55,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 1),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Text(' '),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12))),
+                        ),
                       ),
-                      Container(
+                      SizedBox(
                         height: 55,
                         width: 55,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 1),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Text(' '),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12))),
+                        ),
                       ),
-                      Container(
+                      SizedBox(
                         height: 55,
                         width: 55,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 1),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Text(' '),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12))),
+                        ),
                       ),
                     ],
                   ),
