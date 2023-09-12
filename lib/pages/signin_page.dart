@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/pages/signup_page.dart';
+import 'package:shortchanged/screens/verification_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SignInPage extends StatelessWidget {
@@ -85,7 +86,12 @@ class SignInPage extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.blue, borderRadius: BorderRadius.circular(8)),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const VerificationScreen()));
+                },
                 child: const Text(
                   'Sign in',
                   style: TextStyle(
