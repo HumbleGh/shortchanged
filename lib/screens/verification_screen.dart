@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/signup_page.dart';
+import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -115,7 +115,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SignUpPage()));
+                                builder: (context) => const SignUpScreen()));
                       },
                       child: const Text(
                         '0:50',

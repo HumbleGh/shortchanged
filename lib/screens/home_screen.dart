@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/signin_page.dart';
-import 'package:shortchanged/pages/signup_page.dart';
+import 'package:shortchanged/screens/signin_screen.dart';
+import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const SignUpPage(),
+                builder: (context) => const SignUpScreen(),
               ),
             );
           },
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const SignInPage(),
+                builder: (context) => const SignInScreen(),
               ),
             );
           },

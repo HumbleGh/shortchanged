@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/signup_page.dart';
+import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/screens/verification_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class SignInPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignUpPage()));
+                            builder: (context) => const SignUpScreen()));
                   },
                   child: const Text(
                     'Sign up',

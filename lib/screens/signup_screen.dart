@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/signin_page.dart';
+import 'package:shortchanged/screens/signin_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignUpScreenState extends State<SignUpScreen> {
   String dropdownValue = 'Male';
   @override
   Widget build(BuildContext context) {
@@ -249,7 +249,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SignInPage()));
+                          builder: (context) => const SignInScreen()));
                 },
                 child: const Text(
                   'Sign in',
