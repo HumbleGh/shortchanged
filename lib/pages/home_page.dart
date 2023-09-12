@@ -16,7 +16,8 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
