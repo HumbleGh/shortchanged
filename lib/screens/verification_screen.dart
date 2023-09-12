@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/screens/home_screen.dart';
 import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
@@ -98,8 +99,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const VerificationScreen()));
+                              builder: (context) => const HomePage()));
                     },
                     child: const Text(
                       'Continue',
