@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CategoryText extends StatelessWidget {
   final String text;
-  final textColor;
+  final Color textColor;
   const CategoryText({super.key, required this.text, required this.textColor});
 
   @override

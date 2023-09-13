@@ -50,7 +50,8 @@ class _HomePageState extends State<HomePage> {
                 CategoryText(text: 'Politics', textColor: Colors.black),
               ]),
             ),
-          )
+          ),
+          const Gap(2),
         ],
       )),
     );
