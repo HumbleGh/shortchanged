@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(
-              padding: EdgeInsets.only(left: 10),
-              child: Row(children: [
+              padding: const EdgeInsets.only(left: 10),
+              child: const Row(children: [
                 CategoryText(text: 'Sports', color: Colors.black),
                 CategoryText(text: 'Coding', color: Colors.black),
                 CategoryText(text: 'Education', color: Colors.black),
