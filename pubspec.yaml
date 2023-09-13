@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   gap: ^3.0.1
+  fluentui_system_icons: ^1.1.214
 
 dev_dependencies:
   flutter_test:
