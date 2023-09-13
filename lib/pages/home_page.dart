@@ -43,11 +43,11 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               padding: const EdgeInsets.only(left: 10),
               child: const Row(children: [
-                CategoryText(text: 'Sports', color: Colors.black),
-                CategoryText(text: 'Coding', color: Colors.black),
-                CategoryText(text: 'Education', color: Colors.black),
-                CategoryText(text: 'Health', color: Colors.black),
-                CategoryText(text: 'Politics', color: Colors.black),
+                CategoryText(text: 'Sports', textColor: Colors.black),
+                CategoryText(text: 'Coding', textColor: Colors.black),
+                CategoryText(text: 'Education', textColor: Colors.black),
+                CategoryText(text: 'Health', textColor: Colors.black),
+                CategoryText(text: 'Politics', textColor: Colors.black),
               ]),
             ),
           )
