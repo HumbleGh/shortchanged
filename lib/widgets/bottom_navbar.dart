@@ -1,6 +1,7 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:shortchanged/pages/home_page.dart';
+import 'package:shortchanged/pages/news_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
-    // const SearchScreen(),
+    const NewsPage(),
     // const TicketScreen(),
     // const ProfileScreen()
   ];
