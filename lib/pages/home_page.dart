@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/category_text.dart';
 import 'package:shortchanged/widgets/double_text.dart';
@@ -17,7 +16,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
-    var size = AppLayout.getSize(context);
 
     return Scaffold(
       body: SafeArea(

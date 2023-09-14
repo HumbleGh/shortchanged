@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class MediumNewsCard extends StatelessWidget {
@@ -14,7 +13,7 @@ class MediumNewsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset('assets/images/phone.png'),
-          Gap(AppLayout.getHeight(8)),
+          const Gap(8),
           Text(
             'News Content Goes Here',
             style: Styles.headLineStyle3,
