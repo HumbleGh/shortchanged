@@ -35,10 +35,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           currentIndex: _selectedIindex,
           onTap: _onTappedItem,
           elevation: 10.0,
-          showSelectedLabels: false,
+          showSelectedLabels: true,
           type: BottomNavigationBarType.fixed,
           showUnselectedLabels: true,
-          selectedItemColor: Colors.black,
+          selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(
@@ -46,17 +46,21 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 activeIcon: Icon(FluentIcons.home_32_filled),
                 label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(FluentIcons.search_24_regular),
-                activeIcon: Icon(FluentIcons.search_32_filled),
-                label: 'Search'),
+                icon: Icon(FluentIcons.news_24_regular),
+                activeIcon: Icon(FluentIcons.news_24_filled),
+                label: 'News'),
             BottomNavigationBarItem(
                 icon: Icon(FluentIcons.ticket_horizontal_24_regular),
                 activeIcon: Icon(FluentIcons.ticket_horizontal_24_filled),
-                label: 'Tickets'),
+                label: 'Policy'),
             BottomNavigationBarItem(
-                icon: Icon(FluentIcons.person_24_regular),
-                activeIcon: Icon(FluentIcons.person_32_filled),
-                label: 'Profile'),
+                icon: Icon(FluentIcons.poll_16_regular),
+                activeIcon: Icon(FluentIcons.poll_24_filled),
+                label: 'Polls'),
+            BottomNavigationBarItem(
+                icon: Icon(FluentIcons.settings_24_regular),
+                activeIcon: Icon(FluentIcons.settings_24_filled),
+                label: 'Seetings'),
           ]),
     );
   }
