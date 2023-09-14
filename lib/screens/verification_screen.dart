@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/home_page.dart';
-import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/bottom_navbar.dart';
 
