@@ -15,8 +15,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-
     return Scaffold(
       body: SafeArea(
           child: ListView(
@@ -79,6 +77,7 @@ class _HomePageState extends State<HomePage> {
           const DoubleText(bigText: 'Latest News', smallText: 'view all'),
           const Gap(20),
           const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Row(
               children: [
                 MediumNewsCard(),
