@@ -87,6 +87,40 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+          ),
+          const Gap(20),
+          SingleChildScrollView(
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset('assets/images/phone.png'),
+                      Text(
+                        'News Content Goes Here',
+                        style: Styles.headLineStyle3,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'Ghana',
+                            style: Styles.headLineStyle4
+                                .copyWith(color: Colors.blue),
+                          ),
+                          const Gap(10),
+                          const Text(
+                            '18th March, 2023',
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           )
         ],
       )),
