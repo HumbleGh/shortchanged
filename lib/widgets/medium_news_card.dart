@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class MediumNewsCard extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final int;
   const MediumNewsCard({super.key, required this.int});
 
