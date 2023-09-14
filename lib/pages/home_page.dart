@@ -71,7 +71,23 @@ class _HomePageState extends State<HomePage> {
               ]),
             ),
           ),
-          const Gap(2),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Latest News',
+                  style: Styles.headLineStyle2,
+                ),
+                Text(
+                  'View all',
+                  style: Styles.headLineStyle4.copyWith(color: Colors.blue),
+                )
+              ],
+            ),
+          )
         ],
       )),
     );
