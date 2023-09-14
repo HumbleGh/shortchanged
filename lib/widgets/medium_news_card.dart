@@ -3,7 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class MediumNewsCard extends StatelessWidget {
-  const MediumNewsCard({super.key});
+  final int;
+  const MediumNewsCard({super.key, required this.int});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class MediumNewsCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('assets/images/phone.png'),
+          Image.asset('assets/images/phone$int.png'),
           const Gap(8),
           Text(
             'News Content Goes Here',

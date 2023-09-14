@@ -80,11 +80,17 @@ class _HomePageState extends State<HomePage> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                MediumNewsCard(),
-                MediumNewsCard(),
+                MediumNewsCard(
+                  int: 1,
+                ),
+                MediumNewsCard(
+                  int: 2,
+                ),
               ],
             ),
-          )
+          ),
+          const Gap(20),
+          const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
         ],
       )),
     );
