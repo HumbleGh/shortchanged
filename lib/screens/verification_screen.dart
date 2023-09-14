@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/pages/home_page.dart';
 import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
+import 'package:shortchanged/widgets/bottom_navbar.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -99,7 +100,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomePage()));
+                              builder: (context) => const BottomNavBar()));
                     },
                     child: const Text(
                       'Continue',
@@ -119,7 +120,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SignUpScreen()));
+                                builder: (context) =>
+                                    const VerificationScreen()));
                       },
                       child: const Text(
                         '0:50',

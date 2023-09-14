@@ -42,12 +42,32 @@ class _HomePageState extends State<HomePage> {
             scrollDirection: Axis.horizontal,
             child: Container(
               padding: const EdgeInsets.only(left: 10),
-              child: const Row(children: [
-                CategoryText(text: 'Sports', textColor: Colors.black),
-                CategoryText(text: 'Coding', textColor: Colors.black),
-                CategoryText(text: 'Education', textColor: Colors.black),
-                CategoryText(text: 'Health', textColor: Colors.black),
-                CategoryText(text: 'Politics', textColor: Colors.black),
+              child: Row(children: [
+                CategoryText(
+                  text: 'Sports',
+                  textColor: Colors.black,
+                  containerColor: Colors.grey.shade200,
+                ),
+                const CategoryText(
+                  text: 'Coding',
+                  textColor: Colors.white,
+                  containerColor: Colors.blue,
+                ),
+                CategoryText(
+                  text: 'Education',
+                  textColor: Colors.black,
+                  containerColor: Colors.grey.shade200,
+                ),
+                CategoryText(
+                  text: 'Health',
+                  textColor: Colors.black,
+                  containerColor: Colors.grey.shade200,
+                ),
+                CategoryText(
+                  text: 'Politics',
+                  textColor: Colors.black,
+                  containerColor: Colors.grey.shade200,
+                ),
               ]),
             ),
           ),
