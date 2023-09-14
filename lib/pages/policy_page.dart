@@ -12,9 +12,9 @@ class _PolicyPageState extends State<PolicyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('News Page'),
+        title: const Text('Policy Page'),
       ),
-      body: const Center(child: Text('This is the news page')),
+      body: const Center(child: Text('This is the Policy Page')),
     );
   }
 }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shortchanged/pages/home_page.dart';
 import 'package:shortchanged/pages/news_page.dart';
 import 'package:shortchanged/pages/policy_page.dart';
+import 'package:shortchanged/pages/polls_page.dart';
+import 'package:shortchanged/pages/settings_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -18,7 +20,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const HomePage(),
     const NewsPage(),
     const PolicyPage(),
-    // const ProfileScreen()
+    const PollsPage(),
+    const Settings(),
   ];
 
   void _onTappedItem(int index) {
