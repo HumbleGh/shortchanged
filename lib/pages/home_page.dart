@@ -142,11 +142,32 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Column(
-                  children: [Image.asset('assets/images/small1.png')],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/images/small1.png'),
+                    const Text(
+                      'New Content Goes here',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          'Ghana',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.blue),
+                        ),
+                        const Gap(10),
+                        const Text(
+                          '4mins ago',
+                          style: TextStyle(color: Colors.grey),
+                        )
+                      ],
+                    ),
+                  ],
                 )
               ],
             ),
-          )
+          ),
         ],
       )),
     );
