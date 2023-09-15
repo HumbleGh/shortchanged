@@ -4,6 +4,7 @@ import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/category_text.dart';
 import 'package:shortchanged/widgets/double_text.dart';
 import 'package:shortchanged/widgets/medium_news_card.dart';
+import 'package:shortchanged/widgets/small_news_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -139,32 +140,12 @@ class _HomePageState extends State<HomePage> {
           const Gap(20),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset('assets/images/small1.png'),
-                    const Text(
-                      'New Content Goes here',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          'Ghana',
-                          style: Styles.headLineStyle4
-                              .copyWith(color: Colors.blue),
-                        ),
-                        const Gap(10),
-                        const Text(
-                          '4mins ago',
-                          style: TextStyle(color: Colors.grey),
-                        )
-                      ],
-                    ),
-                  ],
-                )
+                SmallNewsCard(int: 1),
+                Gap(10),
+                SmallNewsCard(int: 2),
               ],
             ),
           ),
