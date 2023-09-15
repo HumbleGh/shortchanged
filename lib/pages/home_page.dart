@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/category_text.dart';
 import 'package:shortchanged/widgets/double_text.dart';
+import 'package:shortchanged/widgets/large_news_card.dart';
 import 'package:shortchanged/widgets/medium_news_card.dart';
 import 'package:shortchanged/widgets/small_news_card.dart';
 
@@ -99,44 +100,7 @@ class _HomePageState extends State<HomePage> {
           const Gap(20),
           const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
           const Gap(14),
-          Container(
-            height: 150,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: const Image(
-                image: AssetImage('assets/images/new.jpg'),
-                fit: BoxFit.cover, // You can adjust the fit as needed
-              ),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              'Programme: The Project to Improve the Quality and Outcomes of Education for All in Mali',
-              style: Styles.headLineStyle3,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                Text(
-                  'Ghana',
-                  style: Styles.headLineStyle4.copyWith(color: Colors.blue),
-                ),
-                const Gap(10),
-                const Text(
-                  '18th March, 2023',
-                  style: TextStyle(color: Colors.grey),
-                )
-              ],
-            ),
-          ),
+          const LargeNewsCard(),
           const Gap(20),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
