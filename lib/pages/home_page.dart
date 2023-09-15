@@ -86,11 +86,30 @@ class _HomePageState extends State<HomePage> {
                 MediumNewsCard(
                   int: 2,
                 ),
+                MediumNewsCard(
+                  int: 1,
+                ),
+                MediumNewsCard(
+                  int: 2,
+                ),
               ],
             ),
           ),
           const Gap(20),
           const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
+          const Gap(20),
+          Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            child: Column(children: [
+              Image.asset(
+                'assets/images/New Image.png',
+              ),
+            ]),
+          )
         ],
       )),
     );
