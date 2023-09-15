@@ -119,6 +119,33 @@ class _HomePageState extends State<HomePage> {
               'Programme: The Project to Improve the Quality and Outcomes of Education for All in Mali',
               style: Styles.headLineStyle3,
             ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Text(
+                  'Ghana',
+                  style: Styles.headLineStyle4.copyWith(color: Colors.blue),
+                ),
+                const Gap(10),
+                const Text(
+                  '18th March, 2023',
+                  style: TextStyle(color: Colors.grey),
+                )
+              ],
+            ),
+          ),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Column(
+                  children: [Image.asset('assets/images/small1.png')],
+                )
+              ],
+            ),
           )
         ],
       )),
