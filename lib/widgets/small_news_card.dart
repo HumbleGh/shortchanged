@@ -12,7 +12,20 @@ class SmallNewsCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset('assets/images/small$int.png'),
+        Container(
+          height: 140,
+          width: 185,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image(
+              image: AssetImage('assets/images/small$int.jpg'),
+              fit: BoxFit.cover, // You can adjust the fit as needed
+            ),
+          ),
+        ),
         const Text(
           'New Content Goes here',
           style: TextStyle(fontWeight: FontWeight.bold),

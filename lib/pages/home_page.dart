@@ -108,7 +108,6 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SmallNewsCard(int: 1),
-                Gap(10),
                 SmallNewsCard(int: 2),
               ],
             ),
