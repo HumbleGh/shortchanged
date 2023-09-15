@@ -97,18 +97,28 @@ class _HomePageState extends State<HomePage> {
           ),
           const Gap(20),
           const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
-          const Gap(20),
+          const Gap(14),
           Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(),
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
+            height: 150,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
             ),
-            child: Column(children: [
-              Image.asset(
-                'assets/images/New Image.png',
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: const Image(
+                image: AssetImage('assets/images/new.jpg'),
+                fit: BoxFit.cover, // You can adjust the fit as needed
               ),
-            ]),
+            ),
+          ),
+          const Gap(10),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              'Programme: The Project to Improve the Quality and Outcomes of Education for All in Mali',
+              style: Styles.headLineStyle3,
+            ),
           )
         ],
       )),
