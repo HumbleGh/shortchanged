@@ -112,6 +112,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          const Gap(20),
+          const DoubleText(
+              bigText: 'Recently Added Polls', smallText: 'view all'),
         ],
       )),
     );
