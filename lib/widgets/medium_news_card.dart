@@ -14,7 +14,20 @@ class MediumNewsCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('assets/images/phone$int.png'),
+          Container(
+            height: 140,
+            width: 246,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage('assets/images/medium$int.jpg'),
+                fit: BoxFit.cover, // You can adjust the fit as needed
+              ),
+            ),
+          ),
           const Gap(8),
           Text(
             'News Content Goes Here',

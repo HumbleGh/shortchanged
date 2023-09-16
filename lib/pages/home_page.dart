@@ -89,10 +89,10 @@ class _HomePageState extends State<HomePage> {
                   int: 2,
                 ),
                 MediumNewsCard(
-                  int: 1,
+                  int: 3,
                 ),
                 MediumNewsCard(
-                  int: 2,
+                  int: 4,
                 ),
               ],
             ),
