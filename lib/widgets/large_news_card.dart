@@ -20,7 +20,7 @@ class LargeNewsCard extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: const Image(
-              image: AssetImage('assets/images/new.jpg'),
+              image: AssetImage('assets/images/medium4.jpg'),
               fit: BoxFit.cover, // You can adjust the fit as needed
             ),
           ),

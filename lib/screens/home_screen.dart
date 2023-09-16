@@ -13,13 +13,11 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       children: [
-        const Expanded(
-          child: SizedBox(
-            height: 500,
-            width: 200,
-            child: Image(
-              image: AssetImage('assets/images/allthree.png'),
-            ),
+        const SizedBox(
+          height: 500,
+          width: 200,
+          child: Image(
+            image: AssetImage('assets/images/allthree.png'),
           ),
         ),
         Text(
