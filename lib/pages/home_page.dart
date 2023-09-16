@@ -115,6 +115,28 @@ class _HomePageState extends State<HomePage> {
           const Gap(20),
           const DoubleText(
               bigText: 'Recently Added Polls', smallText: 'view all'),
+          const Gap(20),
+          Container(
+            // height: 240,
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            decoration: BoxDecoration(
+                color: Colors.grey[100],
+                border: Border.all(color: Colors.grey.shade400, width: 1),
+                borderRadius: BorderRadius.circular(8)),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'Should FREE SHS be tied to E-Levy',
+                      style: Styles.headLineStyle3,
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       )),
     );
