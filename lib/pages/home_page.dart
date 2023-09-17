@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                 const Gap(8),
                 const OptionCard(option: 'I don\'t care'),
                 const Gap(10),
-                Text(
+                const Text(
                   '500 votes, 10 closes in 10 days',
                   style: TextStyle(color: Colors.grey),
                 )
