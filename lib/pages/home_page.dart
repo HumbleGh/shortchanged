@@ -127,12 +127,27 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Should FREE SHS be tied to E-Levy',
                       style: Styles.headLineStyle3,
+                    ),
+                    const Icon(
+                      Icons.more_horiz,
+                      color: Colors.grey,
                     )
                   ],
+                ),
+                const Gap(12),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey.shade300),
+                      borderRadius: BorderRadius.circular(6)),
+                  child: const Text('Not Really'),
                 )
               ],
             ),
