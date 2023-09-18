@@ -1,21 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MainHome(),
-    );
-  }
-}
+import 'package:shortchanged/screens/sports_content.dart';
 
 class MainHome extends StatefulWidget {
   const MainHome({Key? key}) : super(key: key);
@@ -36,7 +21,7 @@ class _MainHomeState extends State<MainHome> {
 
   /// List of body icon
   List<dynamic> content = [
-    Icons.home,
+    const SportsContent(),
     Icons.explore,
     Icons.search,
     Icons.feed,
@@ -55,105 +40,89 @@ class _MainHomeState extends State<MainHome> {
   /////////////////////////////////////
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
-
-      /// APPBAR
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
-        title: Text(
-          "Custom TabBar",
-          style: GoogleFonts.laila(
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        margin: const EdgeInsets.all(5),
-        child: Column(
-          children: [
-            /// CUSTOM TABBAR
-            SizedBox(
-              width: double.infinity,
-              height: 60,
-              child: ListView.builder(
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: items.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (ctx, index) {
-                    return Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              current = index;
-                            });
-                          },
-                          child: AnimatedContainer(
-                            padding: const EdgeInsets.symmetric(horizontal: 15),
-                            duration: const Duration(milliseconds: 300),
-                            margin: const EdgeInsets.all(5),
-                            // width: 80,
-                            height: 45,
-                            decoration: BoxDecoration(
-                              color: current == index
-                                  ? Colors.blue
-                                  : Colors.white54,
-                              borderRadius: current == index
-                                  ? BorderRadius.circular(50)
-                                  : BorderRadius.circular(50),
-                              border: current == index
-                                  ? Border.all(color: Colors.blue, width: 2)
-                                  : null,
-                            ),
-                            child: Center(
-                              child: Text(
-                                items[index],
-                                style: GoogleFonts.laila(
-                                    fontWeight: FontWeight.w500,
-                                    color: current == index
-                                        ? Colors.white
-                                        : Colors.grey),
-                              ),
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      margin: const EdgeInsets.all(5),
+      child: Column(
+        children: [
+          /// CUSTOM TABBAR
+          SizedBox(
+            width: double.infinity,
+            height: 60,
+            child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: items.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (ctx, index) {
+                  return Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            current = index;
+                          });
+                        },
+                        child: AnimatedContainer(
+                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                          duration: const Duration(milliseconds: 300),
+                          margin: const EdgeInsets.all(5),
+                          // width: 80,
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color:
+                                current == index ? Colors.blue : Colors.white54,
+                            borderRadius: current == index
+                                ? BorderRadius.circular(50)
+                                : BorderRadius.circular(50),
+                            border: current == index
+                                ? Border.all(color: Colors.blue, width: 2)
+                                : null,
+                          ),
+                          child: Center(
+                            child: Text(
+                              items[index],
+                              style: GoogleFonts.laila(
+                                  fontWeight: FontWeight.w500,
+                                  color: current == index
+                                      ? Colors.white
+                                      : Colors.grey),
                             ),
                           ),
                         ),
-                      ],
-                    );
-                  }),
-            ),
+                      ),
+                    ],
+                  );
+                }),
+          ),
 
-            /// MAIN BODY
-            Container(
-              margin: const EdgeInsets.only(top: 30),
-              width: double.infinity,
-              height: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    content[current],
-                    size: 200,
-                    color: Colors.deepPurple,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    items[current],
-                    style: GoogleFonts.laila(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 30,
-                        color: Colors.deepPurple),
-                  ),
-                ],
-              ),
+          /// MAIN BODY
+          Container(
+            margin: const EdgeInsets.only(top: 30),
+            width: double.infinity,
+            height: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  content[current],
+                  size: 200,
+                  color: Colors.deepPurple,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  items[current],
+                  style: GoogleFonts.laila(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30,
+                      color: Colors.deepPurple),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
