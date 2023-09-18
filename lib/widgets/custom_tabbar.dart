@@ -27,18 +27,15 @@ class MainHome extends StatefulWidget {
 class _MainHomeState extends State<MainHome> {
   /// List of Tab Bar Item
   List<String> items = [
-    "Home",
-    "Explore",
-    "Search",
-    "Feed",
-    "Post",
-    "Activity",
-    "Setting",
-    "Profile",
+    "Sports",
+    "Coding",
+    "Health",
+    "Education",
+    "Politics",
   ];
 
   /// List of body icon
-  List<IconData> icons = [
+  List<dynamic> content = [
     Icons.home,
     Icons.explore,
     Icons.search,
@@ -96,20 +93,20 @@ class _MainHomeState extends State<MainHome> {
                             });
                           },
                           child: AnimatedContainer(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
                             duration: const Duration(milliseconds: 300),
                             margin: const EdgeInsets.all(5),
-                            width: 80,
+                            // width: 80,
                             height: 45,
                             decoration: BoxDecoration(
                               color: current == index
-                                  ? Colors.white70
+                                  ? Colors.blue
                                   : Colors.white54,
                               borderRadius: current == index
-                                  ? BorderRadius.circular(15)
-                                  : BorderRadius.circular(10),
+                                  ? BorderRadius.circular(50)
+                                  : BorderRadius.circular(50),
                               border: current == index
-                                  ? Border.all(
-                                      color: Colors.deepPurpleAccent, width: 2)
+                                  ? Border.all(color: Colors.blue, width: 2)
                                   : null,
                             ),
                             child: Center(
@@ -118,21 +115,12 @@ class _MainHomeState extends State<MainHome> {
                                 style: GoogleFonts.laila(
                                     fontWeight: FontWeight.w500,
                                     color: current == index
-                                        ? Colors.black
+                                        ? Colors.white
                                         : Colors.grey),
                               ),
                             ),
                           ),
                         ),
-                        Visibility(
-                            visible: current == index,
-                            child: Container(
-                              width: 5,
-                              height: 5,
-                              decoration: const BoxDecoration(
-                                  color: Colors.deepPurpleAccent,
-                                  shape: BoxShape.circle),
-                            ))
                       ],
                     );
                   }),
@@ -142,12 +130,12 @@ class _MainHomeState extends State<MainHome> {
             Container(
               margin: const EdgeInsets.only(top: 30),
               width: double.infinity,
-              height: 550,
+              height: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
-                    icons[current],
+                    content[current],
                     size: 200,
                     color: Colors.deepPurple,
                   ),
