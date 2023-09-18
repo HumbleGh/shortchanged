@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shortchanged/screens/sports_content.dart';
 
-class MainHome extends StatefulWidget {
-  const MainHome({Key? key}) : super(key: key);
+class CustomTabBar extends StatefulWidget {
+  const CustomTabBar({Key? key}) : super(key: key);
 
   @override
-  State<MainHome> createState() => _MainHomeState();
+  State<CustomTabBar> createState() => _CustomTabBarState();
 }
 
-class _MainHomeState extends State<MainHome> {
+class _CustomTabBarState extends State<CustomTabBar> {
   /// List of Tab Bar Item
   List<String> items = [
     "Sports",
