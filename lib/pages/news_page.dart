@@ -32,9 +32,6 @@ class _NewsPage extends State<NewsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple[100],
-
-      /// APPBAR
-
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -80,7 +77,7 @@ class _NewsPage extends State<NewsPage> {
                               child: Center(
                                 child: Text(
                                   items[index],
-                                  style: GoogleFonts.laila(
+                                  style: GoogleFonts.manrope(
                                       fontWeight: FontWeight.w500,
                                       color: current == index
                                           ? Colors.white
@@ -112,7 +109,7 @@ class _NewsPage extends State<NewsPage> {
                     ),
                     Text(
                       items[current],
-                      style: GoogleFonts.laila(
+                      style: GoogleFonts.manrope(
                           fontWeight: FontWeight.w500,
                           fontSize: 30,
                           color: Colors.deepPurple),
