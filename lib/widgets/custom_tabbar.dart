@@ -104,14 +104,6 @@ class _CustomTabBarState extends State<CustomTabBar> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  content[current],
-                  size: 200,
-                  color: Colors.deepPurple,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
                 Text(
                   items[current],
                   style: GoogleFonts.laila(
