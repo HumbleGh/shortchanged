@@ -21,8 +21,8 @@ class _NewsPage extends State<NewsPage> {
                 color: Colors.white,
                 child: TabBar(
                   physics: const ClampingScrollPhysics(),
-                  padding:
-                      EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 10, right: 10, bottom: 10),
                   unselectedLabelColor: Colors.pink,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicator: BoxDecoration(
@@ -36,7 +36,7 @@ class _NewsPage extends State<NewsPage> {
                             borderRadius: BorderRadius.circular(30),
                             border:
                                 Border.all(color: Colors.pinkAccent, width: 1)),
-                        child: Align(
+                        child: const Align(
                           alignment: Alignment.center,
                           child: Text("Chat"),
                         ),
@@ -49,7 +49,7 @@ class _NewsPage extends State<NewsPage> {
                             borderRadius: BorderRadius.circular(30),
                             border:
                                 Border.all(color: Colors.pinkAccent, width: 1)),
-                        child: Align(
+                        child: const Align(
                           alignment: Alignment.center,
                           child: Text("Status"),
                         ),
@@ -62,7 +62,7 @@ class _NewsPage extends State<NewsPage> {
                             borderRadius: BorderRadius.circular(30),
                             border:
                                 Border.all(color: Colors.pinkAccent, width: 1)),
-                        child: Align(
+                        child: const Align(
                           alignment: Alignment.center,
                           child: Text("Call"),
                         ),
@@ -76,7 +76,7 @@ class _NewsPage extends State<NewsPage> {
               child: TabBarView(
                 children: [
                   ListView.separated(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     itemCount: 20,
                     separatorBuilder: (BuildContext context, int index) =>
                         const Divider(),
@@ -84,13 +84,13 @@ class _NewsPage extends State<NewsPage> {
                       return ListTile(
                         onTap: () {},
                         title: Text("Chat List $index"),
-                        subtitle: Text("Tab bar ui"),
-                        trailing: Icon(Icons.arrow_circle_right_sharp),
+                        subtitle: const Text("Tab bar ui"),
+                        trailing: const Icon(Icons.arrow_circle_right_sharp),
                       );
                     },
                   ),
                   ListView.separated(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     itemCount: 20,
                     separatorBuilder: (BuildContext context, int index) =>
                         const Divider(),
@@ -98,13 +98,13 @@ class _NewsPage extends State<NewsPage> {
                       return ListTile(
                         onTap: () {},
                         title: Text("Status List $index"),
-                        subtitle: Text("Tab bar ui"),
-                        trailing: Icon(Icons.arrow_circle_right_sharp),
+                        subtitle: const Text("Tab bar ui"),
+                        trailing: const Icon(Icons.arrow_circle_right_sharp),
                       );
                     },
                   ),
                   ListView.separated(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     itemCount: 20,
                     separatorBuilder: (BuildContext context, int index) =>
                         const Divider(),
@@ -112,8 +112,8 @@ class _NewsPage extends State<NewsPage> {
                       return ListTile(
                         onTap: () {},
                         title: Text("Call List $index"),
-                        subtitle: Text("Tab bar ui"),
-                        trailing: Icon(Icons.arrow_circle_right_sharp),
+                        subtitle: const Text("Tab bar ui"),
+                        trailing: const Icon(Icons.arrow_circle_right_sharp),
                       );
                     },
                   ),
