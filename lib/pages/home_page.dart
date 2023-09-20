@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/coding_content.dart';
 import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
@@ -60,9 +61,10 @@ class _HomePage extends State<HomePage> {
                 ],
               ),
             ),
+            const Gap(10),
             Container(
-              margin: const EdgeInsets.only(bottom: 20),
-              height: 50.0,
+              margin: const EdgeInsets.only(bottom: 15),
+              height: 40.0,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: tabTitles.length,
@@ -77,7 +79,7 @@ class _HomePage extends State<HomePage> {
                       child: Container(
                         margin: const EdgeInsets.only(left: 10.0),
                         padding: const EdgeInsets.symmetric(
-                          horizontal: 20.0,
+                          horizontal: 15.0,
                           vertical: 10.0,
                         ),
                         decoration: BoxDecoration(
