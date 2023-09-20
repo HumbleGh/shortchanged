@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/widgets/double_text.dart';
+import 'package:shortchanged/widgets/large_news_card.dart';
 import 'package:shortchanged/widgets/medium_news_card.dart';
 
 class SportsContent extends StatefulWidget {
@@ -37,6 +38,11 @@ class _SportsContentState extends State<SportsContent> {
               ],
             ),
           ),
+          Gap(20),
+          DoubleText(bigText: 'Top Policies', smallText: 'view all'),
+          Gap(14),
+          LargeNewsCard(),
+          Gap(20),
         ],
       ),
     );

@@ -25,6 +25,7 @@ class LargeNewsCard extends StatelessWidget {
             ),
           ),
         ),
+        const Gap(8),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(

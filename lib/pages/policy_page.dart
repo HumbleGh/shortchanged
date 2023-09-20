@@ -41,7 +41,7 @@ class _PolicyPageState extends State<PolicyPage> {
           children: [
             Container(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
               child: Column(
                 children: [
                   Row(
@@ -88,7 +88,7 @@ class _PolicyPageState extends State<PolicyPage> {
                           border: Border.all(
                             color: _currentIndex == index
                                 ? Colors.blue
-                                : Colors.grey,
+                                : Colors.grey.shade200,
                             width: 1.0,
                           ),
                         ),
