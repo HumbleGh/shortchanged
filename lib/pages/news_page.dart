@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shortchanged/screens/coding_content.dart';
+import 'package:shortchanged/screens/education_content.dart';
+import 'package:shortchanged/screens/health_content.dart';
+import 'package:shortchanged/screens/politics_content.dart';
+import 'package:shortchanged/screens/sports_content.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({Key? key}) : super(key: key);
@@ -19,12 +24,12 @@ class _NewsPage extends State<NewsPage> {
   ];
 
   /// List of body icon
-  List<IconData> icons = [
-    Icons.home,
-    Icons.explore,
-    Icons.search,
-    Icons.feed,
-    Icons.post_add,
+  List<Widget> widgets = [
+    const SportsContent(),
+    const CodingContent(),
+    const HealthContent(),
+    const EducationContent(),
+    const PoliticsContent(),
   ];
   int current = 0;
 
@@ -93,20 +98,11 @@ class _NewsPage extends State<NewsPage> {
 
               /// MAIN BODY
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 20),
                 width: double.infinity,
-                height: 550,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      icons[current],
-                      size: 200,
-                      color: Colors.deepPurple,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
                     Text(
                       items[current],
                       style: GoogleFonts.manrope(
