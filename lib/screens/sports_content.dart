@@ -21,8 +21,8 @@ class _SportsContentState extends State<SportsContent> {
       body: ListView(
         children: [
           const DoubleText(bigText: 'Latest News', smallText: 'view all'),
-          Gap(10),
-          SingleChildScrollView(
+          const Gap(10),
+          const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
@@ -41,14 +41,14 @@ class _SportsContentState extends State<SportsContent> {
               ],
             ),
           ),
-          Gap(20),
-          DoubleText(bigText: 'Top Policies', smallText: 'view all'),
-          Gap(10),
-          LargeNewsCard(),
-          Gap(20),
+          const Gap(20),
+          const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
+          const Gap(10),
+          const LargeNewsCard(),
+          const Gap(20),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SmallNewsCard(int: 1),
@@ -85,14 +85,14 @@ class _SportsContentState extends State<SportsContent> {
                     )
                   ],
                 ),
-                Gap(12),
-                OptionCard(option: 'Yeah'),
-                Gap(8),
-                OptionCard(option: 'Not Really'),
-                Gap(8),
-                OptionCard(option: 'I don\'t care'),
-                Gap(10),
-                Text(
+                const Gap(12),
+                const OptionCard(option: 'Yeah'),
+                const Gap(8),
+                const OptionCard(option: 'Not Really'),
+                const Gap(8),
+                const OptionCard(option: 'I don\'t care'),
+                const Gap(10),
+                const Text(
                   '500 votes, 10 closes in 10 days',
                   style: TextStyle(color: Colors.grey),
                 )
