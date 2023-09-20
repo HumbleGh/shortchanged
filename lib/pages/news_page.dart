@@ -12,30 +12,32 @@ class _NewsPage extends State<NewsPage> {
     return SafeArea(
       child: Scaffold(
           body: DefaultTabController(
-        length: 3,
+        length: 5,
         child: Column(
           children: [
             Material(
-              child: Container(
+              child: SizedBox(
                 height: 70,
-                color: Colors.white,
+                // color: Colors.transparent,
                 child: TabBar(
-                  physics: const ClampingScrollPhysics(),
+                  labelColor: Colors.white,
+                  physics: const BouncingScrollPhysics(),
                   padding: const EdgeInsets.only(
-                      top: 10, left: 10, right: 10, bottom: 10),
-                  unselectedLabelColor: Colors.pink,
+                      top: 10, left: 0, right: 0, bottom: 10),
+                  unselectedLabelColor: Colors.grey,
+                  isScrollable: true,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicator: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.pinkAccent),
+                      color: Colors.blue),
                   tabs: [
                     Tab(
                       child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            border:
-                                Border.all(color: Colors.pinkAccent, width: 1)),
+                            border: Border.all(color: Colors.blue, width: 1)),
                         child: const Align(
                           alignment: Alignment.center,
                           child: Text("Chat"),
@@ -44,11 +46,11 @@ class _NewsPage extends State<NewsPage> {
                     ),
                     Tab(
                       child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            border:
-                                Border.all(color: Colors.pinkAccent, width: 1)),
+                            border: Border.all(color: Colors.blue, width: 1)),
                         child: const Align(
                           alignment: Alignment.center,
                           child: Text("Status"),
@@ -57,17 +59,43 @@ class _NewsPage extends State<NewsPage> {
                     ),
                     Tab(
                       child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            border:
-                                Border.all(color: Colors.pinkAccent, width: 1)),
+                            border: Border.all(color: Colors.blue, width: 1)),
                         child: const Align(
                           alignment: Alignment.center,
                           child: Text("Call"),
                         ),
                       ),
-                    )
+                    ),
+                    Tab(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        height: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            border: Border.all(color: Colors.blue, width: 1)),
+                        child: const Align(
+                          alignment: Alignment.center,
+                          child: Text("Call"),
+                        ),
+                      ),
+                    ),
+                    Tab(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        height: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            border: Border.all(color: Colors.blue, width: 1)),
+                        child: const Align(
+                          alignment: Alignment.center,
+                          child: Text("Call"),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -75,6 +103,34 @@ class _NewsPage extends State<NewsPage> {
             Expanded(
               child: TabBarView(
                 children: [
+                  ListView.separated(
+                    padding: const EdgeInsets.all(15),
+                    itemCount: 20,
+                    separatorBuilder: (BuildContext context, int index) =>
+                        const Divider(),
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        onTap: () {},
+                        title: Text("Chat List $index"),
+                        subtitle: const Text("Tab bar ui"),
+                        trailing: const Icon(Icons.arrow_circle_right_sharp),
+                      );
+                    },
+                  ),
+                  ListView.separated(
+                    padding: const EdgeInsets.all(15),
+                    itemCount: 20,
+                    separatorBuilder: (BuildContext context, int index) =>
+                        const Divider(),
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        onTap: () {},
+                        title: Text("Chat List $index"),
+                        subtitle: const Text("Tab bar ui"),
+                        trailing: const Icon(Icons.arrow_circle_right_sharp),
+                      );
+                    },
+                  ),
                   ListView.separated(
                     padding: const EdgeInsets.all(15),
                     itemCount: 20,
