@@ -21,7 +21,7 @@ class _SportsContentState extends State<SportsContent> {
       body: ListView(
         children: [
           const DoubleText(bigText: 'Latest News', smallText: 'view all'),
-          Gap(20),
+          Gap(10),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -43,7 +43,7 @@ class _SportsContentState extends State<SportsContent> {
           ),
           Gap(20),
           DoubleText(bigText: 'Top Policies', smallText: 'view all'),
-          Gap(14),
+          Gap(10),
           LargeNewsCard(),
           Gap(20),
           Container(
@@ -59,13 +59,13 @@ class _SportsContentState extends State<SportsContent> {
           const Gap(20),
           const DoubleText(
               bigText: 'Recently Added Polls', smallText: 'view all'),
-          const Gap(20),
+          const Gap(10),
           Container(
             // height: 240,
             margin: const EdgeInsets.symmetric(horizontal: 20),
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             decoration: BoxDecoration(
-                color: Colors.grey[100],
+                color: Colors.grey.shade50,
                 border: Border.all(color: Colors.grey.shade400, width: 1),
                 borderRadius: BorderRadius.circular(8)),
             child: Column(
@@ -76,7 +76,8 @@ class _SportsContentState extends State<SportsContent> {
                   children: [
                     Text(
                       'Should FREE SHS be tied to E-Levy',
-                      style: Styles.headLineStyle3,
+                      style:
+                          Styles.headLineStyle4.copyWith(color: Colors.black),
                     ),
                     const Icon(
                       Icons.more_horiz,
