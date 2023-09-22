@@ -24,7 +24,15 @@ class DoubleText extends StatelessWidget {
             style: Styles.headLineStyle3,
           ),
           GestureDetector(
-            onTap: () => page,
+            onTap: () {
+              // Navigate to the required page
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => page,
+                ),
+              );
+            },
             child: Text(
               smallText,
               style: Styles.headLineStyle4.copyWith(color: Colors.blue),
