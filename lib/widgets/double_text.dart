@@ -4,8 +4,13 @@ import 'package:shortchanged/utils/app_style.dart';
 class DoubleText extends StatelessWidget {
   final String bigText;
   final String smallText;
+  final Widget page;
 
-  const DoubleText({super.key, required this.bigText, required this.smallText});
+  const DoubleText(
+      {super.key,
+      required this.bigText,
+      required this.smallText,
+      required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +23,12 @@ class DoubleText extends StatelessWidget {
             bigText,
             style: Styles.headLineStyle3,
           ),
-          Text(
-            smallText,
-            style: Styles.headLineStyle4.copyWith(color: Colors.blue),
+          GestureDetector(
+            onTap: () => page,
+            child: Text(
+              smallText,
+              style: Styles.headLineStyle4.copyWith(color: Colors.blue),
+            ),
           )
         ],
       ),

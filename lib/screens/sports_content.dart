@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/pages/news_page.dart';
+import 'package:shortchanged/pages/policy_page.dart';
+import 'package:shortchanged/pages/polls_page.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/double_text.dart';
 import 'package:shortchanged/widgets/large_news_card.dart';
@@ -20,7 +23,11 @@ class _SportsContentState extends State<SportsContent> {
     return Scaffold(
       body: ListView(
         children: [
-          const DoubleText(bigText: 'Latest News', smallText: 'view all'),
+          const DoubleText(
+            bigText: 'Latest News',
+            smallText: 'view all',
+            page: NewsPage(),
+          ),
           const Gap(10),
           const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -42,7 +49,11 @@ class _SportsContentState extends State<SportsContent> {
             ),
           ),
           const Gap(20),
-          const DoubleText(bigText: 'Top Policies', smallText: 'view all'),
+          const DoubleText(
+            bigText: 'Top Policies',
+            smallText: 'view all',
+            page: PolicyPage(),
+          ),
           const Gap(10),
           const LargeNewsCard(),
           const Gap(20),
@@ -58,7 +69,10 @@ class _SportsContentState extends State<SportsContent> {
           ),
           const Gap(20),
           const DoubleText(
-              bigText: 'Recently Added Polls', smallText: 'view all'),
+            bigText: 'Recently Added Polls',
+            smallText: 'view all',
+            page: PollsPage(),
+          ),
           const Gap(10),
           Container(
             // height: 240,
