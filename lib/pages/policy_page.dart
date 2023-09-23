@@ -1,20 +1,129 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
+import 'package:shortchanged/screens/coding_content.dart';
+import 'package:shortchanged/screens/education_content.dart';
+import 'package:shortchanged/screens/health_content.dart';
+import 'package:shortchanged/screens/policy_sports_content.dart';
+import 'package:shortchanged/screens/politics_content.dart';
+import 'package:shortchanged/screens/sports_content.dart';
+import 'package:shortchanged/utils/app_style.dart';
 
 class PolicyPage extends StatefulWidget {
-  const PolicyPage({super.key});
+  const PolicyPage({Key? key}) : super(key: key);
 
   @override
-  State<PolicyPage> createState() => _PolicyPage();
+  // ignore: library_private_types_in_public_api
+  _PolicyPage createState() => _PolicyPage();
 }
 
 class _PolicyPage extends State<PolicyPage> {
+  final List<String> tabTitles = [
+    "Sports",
+    "Coding",
+    "Education",
+    "Health",
+    "Politics",
+  ];
+  int _currentIndex = 0;
+
+  final List<Widget> tabContents = [
+    const PolicySportsContent(),
+    const CodingContent(),
+    const EducationContent(),
+    const HealthContent(),
+    const PoliticsContent(),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Policy Page'),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Column(
+          children: [
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Policy',
+                        style: Styles.headLineStyle1,
+                      ),
+                      SvgPicture.asset(
+                        'assets/icons/Notification.svg',
+                        width: 24.0,
+                        height: 24.0,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const Gap(10),
+            Container(
+              margin: const EdgeInsets.only(bottom: 15),
+              height: 40.0,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: tabTitles.length,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _currentIndex = index;
+                      });
+                    },
+                    child: SizedBox(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0,
+                          vertical: 10.0,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50.0),
+                          color: _currentIndex == index
+                              ? Colors.blue
+                              : Colors.grey.shade200,
+                          border: Border.all(
+                            color: _currentIndex == index
+                                ? Colors.blue
+                                : Colors.grey.shade200,
+                            width: 1.0,
+                          ),
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            tabTitles[index],
+                            style: TextStyle(
+                              color: _currentIndex == index
+                                  ? Colors.white
+                                  : Colors.black,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.grey.shade200,
+                child: tabContents[
+                    _currentIndex], // Display the selected content page
+              ),
+            ),
+          ],
+        ),
       ),
-      body: const Center(child: Text('This is the Policy Page')),
     );
   }
 }

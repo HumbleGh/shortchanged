@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/news_screen.dart';
 import 'package:shortchanged/utils/app_style.dart';
@@ -30,10 +31,11 @@ class _NewsPageState extends State<NewsPage> {
                         style: Styles.headLineStyle1,
                       ),
 
-                      const Icon(
-                        Icons.notifications,
-                        color: Colors.black,
-                      ),
+                      SvgPicture.asset(
+                        'assets/icons/Notification.svg',
+                        width: 24.0,
+                        height: 24.0,
+                      )
                       // SvgPicture.asset(
                       //   'assets/icons/Notification.svg',
                       //   height: 50.0,

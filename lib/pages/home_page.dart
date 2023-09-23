@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/coding_content.dart';
 import 'package:shortchanged/screens/education_content.dart';
@@ -52,9 +53,10 @@ class _HomePage extends State<HomePage> {
                         'My Feed',
                         style: Styles.headLineStyle1,
                       ),
-                      const Icon(
-                        Icons.notifications,
-                        color: Colors.black,
+                      SvgPicture.asset(
+                        'assets/icons/Notification.svg',
+                        width: 24.0,
+                        height: 24.0,
                       )
                     ],
                   ),

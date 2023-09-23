@@ -1,4 +1,3 @@
-import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import Flutter SVG package
 import 'package:shortchanged/pages/home_page.dart';
@@ -50,37 +49,38 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/HomeOutline.svg',
-              width: 24,
-              height: 24,
             ), // Provide icon
             activeIcon: SvgPicture.asset(
               'assets/icons/HomeBold.svg',
-              width: 24,
-              height: 24,
             ), // Provide activeIcon
             label: 'Home',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(FluentIcons.news_24_regular), // Provide icon
-            activeIcon: Icon(FluentIcons.news_24_filled), // Provide activeIcon
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+                'assets/icons/DocumentOutline.svg'), // Provide icon
+            activeIcon: SvgPicture.asset(
+                'assets/icons/DocumentBold.svg'), // Provide activeIcon
             label: 'News',
           ),
-          const BottomNavigationBarItem(
-            icon:
-                Icon(FluentIcons.ticket_horizontal_24_regular), // Provide icon
-            activeIcon: Icon(
-                FluentIcons.ticket_horizontal_24_filled), // Provide activeIcon
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+                'assets/icons/WorkOutline.svg'), // Provide icon
+            activeIcon: SvgPicture.asset(
+                'assets/icons/WorkBold.svg'), // Provide activeIcon
             label: 'Policy',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(FluentIcons.poll_16_regular), // Provide icon
-            activeIcon: Icon(FluentIcons.poll_24_filled), // Provide activeIcon
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+                'assets/icons/ChartOutline.svg'), // Provide icon
+            activeIcon: SvgPicture.asset(
+                'assets/icons/ChartBold.svg'), // Provide activeIcon
             label: 'Polls',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(FluentIcons.settings_24_regular), // Provide icon
-            activeIcon:
-                Icon(FluentIcons.settings_24_filled), // Provide activeIcon
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+                'assets/icons/SettingOutline.svg'), // Provide icon
+            activeIcon: SvgPicture.asset(
+                'assets/icons/SettingBold.svg'), // Provide activeIcon
             label: 'Settings',
           ),
         ],
