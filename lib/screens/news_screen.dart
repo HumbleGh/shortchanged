@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class NewsScreen extends StatefulWidget {
@@ -57,21 +58,17 @@ class _NewsScreenState extends State<NewsScreen> {
                     ),
                   ],
                 ),
-                const Row(
+                Row(
                   children: [
                     Row(
                       children: [
-                        Icon(
-                          Icons.thumb_up,
-                          color: Colors.black,
-                          size: 18.0,
-                        ),
-                        Gap(4),
-                        Text('800')
+                        SvgPicture.asset('aseets/icons/like.svg'),
+                        const Gap(4),
+                        const Text('800')
                       ],
                     ),
-                    Gap(8),
-                    Row(
+                    const Gap(8),
+                    const Row(
                       children: [
                         Icon(
                           Icons.thumb_down,
