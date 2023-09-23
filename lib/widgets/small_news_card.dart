@@ -14,7 +14,7 @@ class SmallNewsCard extends StatelessWidget {
       children: [
         Container(
           height: 140,
-          width: 185,
+          width: 170,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -26,8 +26,9 @@ class SmallNewsCard extends StatelessWidget {
             ),
           ),
         ),
+        const Gap(4),
         const Text(
-          'New Content Goes here',
+          'News Title goes here',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Row(

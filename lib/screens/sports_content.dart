@@ -58,13 +58,18 @@ class _SportsContentState extends State<SportsContent> {
           const LargeNewsCard(),
           const Gap(20),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SmallNewsCard(int: 1),
-                SmallNewsCard(int: 2),
-              ],
+            width: double.infinity,
+            padding: const EdgeInsets.only(left: 15),
+            child: const SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SmallNewsCard(int: 1),
+                  Gap(20),
+                  SmallNewsCard(int: 2),
+                ],
+              ),
             ),
           ),
           const Gap(20),
