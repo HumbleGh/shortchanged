@@ -18,11 +18,11 @@ class PolicyPage extends StatefulWidget {
 
 class _PolicyPage extends State<PolicyPage> {
   final List<String> tabTitles = [
-    "Sports",
-    "Coding",
+    "All",
     "Education",
     "Health",
-    "Politics",
+    "Sports",
+    "Tourism",
   ];
   int _currentIndex = 0;
 
