@@ -6,7 +6,6 @@ import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
 import 'package:shortchanged/screens/policy_sports_content.dart';
 import 'package:shortchanged/screens/politics_content.dart';
-import 'package:shortchanged/screens/sports_content.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class PolicyPage extends StatefulWidget {
