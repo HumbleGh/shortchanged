@@ -116,29 +116,29 @@ class _NewsScreenState extends State<NewsScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: const Text(
-                    " The current funding module of the"
-                    "Free Senior High School policy is not"
+                    "The current funding module of the "
+                    "Free Senior High School policy is not "
                     "sustainable and needs to be reviewed urgently,"
                     "according to Dr. Steve Manteaw, Co-chair of Ghana"
                     "Extractive Industries Transparency Initiative."
                     "More than GH¢1.8billion of crude oil revenue "
-                    "goes into financing the policy every year,"
-                    "but Dr. Manteaw says this approach is not sustainable because oil"
-                    "is a finite resource and the policy puts an extra burden on government."
-                    "He therefore believes corporate bodies can be encouraged to contribute to the policy."
-                    "“Today, we are at a point"
-                    "where Free SHS risks collapse"
-                    "if we don’t pass the E-levy; the economy"
-                    "is in dire straits because over GH¢1.2billion"
-                    "of oil revenue goes into financing Free SHS on a yearly"
-                    "basis, and it is not sustainable, he said."
-                    "Nearly five years down the line, the policy’s"
-                    "long-term future remains uncertain due to"
-                    "dwindling production volumes, falling revenues"
-                    "against rising expenditure, and ballooning public"
-                    "sector debt and lack of diversified funding sources."
+                    "goes into financing the policy every year, "
+                    "but Dr. Manteaw says this approach is not sustainable because oil "
+                    "is a finite resource and the policy puts an extra burden on government. "
+                    "He therefore believes corporate bodies can be encouraged to contribute to the policy. "
+                    "Today, we are at a point "
+                    "where Free SHS risks collapse "
+                    "if we don’t pass the E-levy; the economy "
+                    "is in dire straits because over GH¢1.2billionn "
+                    "of oil revenue goes into financing Free SHS on a yearly "
+                    "basis, and it is not sustainable, he said. "
+                    "Nearly five years down the line, the policy’s "
+                    "long-term future remains uncertain due to "
+                    "dwindling production volumes, falling revenues "
+                    "against rising expenditure, and ballooning public "
+                    "sector debt and lack of diversified funding sources. "
                     "rn as we reprioritise,” he advocated.",
-                    style: TextStyle(fontSize: 16)),
+                    style: TextStyle(fontSize: 12)),
               ),
             ],
           )
