@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/coding_content.dart';
 import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
-import 'package:shortchanged/screens/policy_sports_content.dart';
+import 'package:shortchanged/screens/policy_all_content.dart';
 import 'package:shortchanged/screens/politics_content.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
@@ -24,10 +24,11 @@ class _PolicyPage extends State<PolicyPage> {
     "Sports",
     "Tourism",
   ];
+
   int _currentIndex = 0;
 
   final List<Widget> tabContents = [
-    const PolicySportsContent(),
+    const PolicyAllContent(),
     const CodingContent(),
     const EducationContent(),
     const HealthContent(),

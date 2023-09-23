@@ -62,33 +62,43 @@ class _NewsScreenState extends State<NewsScreen> {
                   children: [
                     Row(
                       children: [
-                        SvgPicture.asset('aseets/icons/like.svg'),
+                        SvgPicture.asset(
+                          'assets/icons/like.svg',
+                          height: 16,
+                          width: 16,
+                          // ignore: deprecated_member_use
+                          color: Colors.grey,
+                        ),
                         const Gap(4),
                         const Text('800')
                       ],
                     ),
                     const Gap(8),
-                    const Row(
-                      children: [
-                        Icon(
-                          Icons.thumb_down,
-                          color: Colors.black,
-                          size: 18.0,
-                        ),
-                        Gap(4),
-                        Text('800')
-                      ],
-                    ),
-                    Gap(8),
                     Row(
                       children: [
-                        Icon(
-                          Icons.comment,
-                          color: Colors.black,
-                          size: 18.0,
+                        SvgPicture.asset(
+                          'assets/icons/dislike.svg',
+                          height: 16,
+                          width: 16,
+                          // ignore: deprecated_member_use
+                          color: Colors.grey,
                         ),
-                        Gap(4),
-                        Text('120')
+                        const Gap(4),
+                        const Text('800')
+                      ],
+                    ),
+                    const Gap(8),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/icons/Chat.svg',
+                          height: 16,
+                          width: 16,
+                          // ignore: deprecated_member_use
+                          color: Colors.grey,
+                        ),
+                        const Gap(4),
+                        const Text('120')
                       ],
                     ),
                   ],
