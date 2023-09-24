@@ -3,11 +3,9 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/pages/news_page.dart';
 import 'package:shortchanged/pages/policy_page.dart';
 import 'package:shortchanged/pages/polls_page.dart';
-import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/double_text.dart';
 import 'package:shortchanged/widgets/large_news_card.dart';
 import 'package:shortchanged/widgets/medium_news_card.dart';
-import 'package:shortchanged/widgets/option_card.dart';
 import 'package:shortchanged/widgets/poll_card.dart';
 import 'package:shortchanged/widgets/small_news_card.dart';
 
