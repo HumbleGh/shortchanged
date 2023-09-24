@@ -13,12 +13,18 @@ class _PolicyAllContent extends State<PolicyAllContent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: const [
-          Gap(20),
-          PolicyTile(),
-        ],
-      ),
+      body: ListView(children: const [
+        Gap(20),
+        PolicyTile(
+          news: 'The Programme of Cooperation between...',
+          title: 'Cooperation Mali-UNICEF',
+        ),
+        Gap(20),
+        PolicyTile(
+          news: 'The Programme of Cooperation between...',
+          title: 'Cooperation Mali-UNICEF',
+        ),
+      ]),
     );
   }
 }

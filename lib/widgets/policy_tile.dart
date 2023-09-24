@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:shortchanged/utils/app_style.dart';
 
-class PolicyTile extends StatefulWidget {
-  const PolicyTile({
-    super.key,
-  });
+class PolicyTile extends StatelessWidget {
+  final String title;
+  final String news;
 
-  @override
-  State<PolicyTile> createState() => _PolicyTileState();
-}
+  const PolicyTile({super.key, required this.news, required this.title});
 
-class _PolicyTileState extends State<PolicyTile> {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text('title'), Text('subtitle')],
+            children: [
+              Text(
+                title,
+                style: Styles.headLineStyle3,
+              ),
+              Text(news)
+            ],
           ),
-          Icon(
+          const Icon(
             Icons.arrow_forward_ios,
             color: Colors.grey,
           )

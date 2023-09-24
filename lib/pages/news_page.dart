@@ -30,17 +30,11 @@ class _NewsPageState extends State<NewsPage> {
                         'News',
                         style: Styles.headLineStyle1,
                       ),
-
                       SvgPicture.asset(
                         'assets/icons/Notification.svg',
                         width: 24.0,
                         height: 24.0,
                       )
-                      // SvgPicture.asset(
-                      //   'assets/icons/Notification.svg',
-                      //   height: 50.0,
-                      //   width: 50,
-                      // )
                     ]),
               ),
               Container(

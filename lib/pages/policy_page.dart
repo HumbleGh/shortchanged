@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/coding_content.dart';
 import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
 import 'package:shortchanged/screens/policy_all_content.dart';
 import 'package:shortchanged/screens/politics_content.dart';
-import 'package:shortchanged/utils/app_style.dart';
+import 'package:shortchanged/widgets/title_notification.dart';
 
 class PolicyPage extends StatefulWidget {
   const PolicyPage({Key? key}) : super(key: key);
@@ -43,27 +42,9 @@ class _PolicyPage extends State<PolicyPage> {
         body: Column(
           children: [
             Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Policy',
-                        style: Styles.headLineStyle1,
-                      ),
-                      SvgPicture.asset(
-                        'assets/icons/Notification.svg',
-                        width: 24.0,
-                        height: 24.0,
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
+                child: const TitleNotification(title: 'Policy')),
             const Gap(10),
             Container(
               margin: const EdgeInsets.only(bottom: 15),
