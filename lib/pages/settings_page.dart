@@ -34,6 +34,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     children: [
                       const CircleAvatar(
                         radius: 30,
+                        child: Icon(
+                          Icons.person,
+                        ),
                       ),
                       Gap(AppLayout.getHeight(12)),
                       Column(
@@ -51,11 +54,16 @@ class _SettingsPageState extends State<SettingsPage> {
                   SvgPicture.asset('assets/icons/edit-2.svg')
                 ],
               ),
-              Gap(AppLayout.getHeight(20)),
+              Gap(AppLayout.getHeight(30)),
               const IconTextIcon(
                   assetName: 'assets/icons/NotificationBold.svg',
                   title: 'Device Notification',
-                  subtitle: 'Device Notification, Emails & Updates')
+                  subtitle: 'Device Notification, Emails & Updates'),
+              Gap(AppLayout.getHeight(30)),
+              const IconTextIcon(
+                  assetName: 'assets/icons/ChatBold.svg',
+                  title: 'Support',
+                  subtitle: 'Talk to our technical team'),
             ],
           ),
         ),
