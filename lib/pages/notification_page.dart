@@ -43,9 +43,19 @@ class _NotificationPageState extends State<NotificationPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
                         height: 40,
                         width: 40,
-                        decoration: BoxDecoration(color: Colors.blue.shade100),
+                        decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            shape: BoxShape.circle),
+                        child: SvgPicture.asset(
+                          'assets/icons/Notification.svg',
+                          // ignore: deprecated_member_use
+                          color: Colors.blue.shade800,
+                          //   height: 5,
+                          //   width: 5,
+                        ),
                       ),
                       const Gap(16),
                       Expanded(
