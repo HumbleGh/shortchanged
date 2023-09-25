@@ -38,7 +38,7 @@ class _PolicyPage extends State<PolicyPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Container(

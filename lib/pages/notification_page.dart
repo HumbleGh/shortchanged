@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_style.dart';
+import 'package:shortchanged/widgets/notification_card.dart';
 
 class NotificationPage extends StatefulWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -36,45 +37,27 @@ class _NotificationPageState extends State<NotificationPage> {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: Column(
+              child: const Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.blue.shade100,
-                            shape: BoxShape.circle),
-                        child: SvgPicture.asset(
-                          'assets/icons/Notification.svg',
-                          // ignore: deprecated_member_use
-                          color: Colors.blue.shade800,
-                          //   height: 5,
-                          //   width: 5,
-                        ),
-                      ),
-                      const Gap(16),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('New device has been authorized',
-                                style: Styles.headLineStyle3
-                                    .copyWith(fontWeight: FontWeight.bold)),
-                            const Text(
-                              "Are you new to xwallet? Totally new to cryptocurrencies and ever wondered how to do the basic things?",
-                              style:
-                                  TextStyle(fontSize: 12), // Adjust font size
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  )
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
+                  Gap(20),
+                  NotificationCard(),
                 ],
               ),
             ),
