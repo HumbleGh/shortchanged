@@ -5,6 +5,7 @@ import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
 import 'package:shortchanged/screens/policy_all_content.dart';
 import 'package:shortchanged/screens/politics_content.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/widgets/title_notification.dart';
 
 class PolicyPage extends StatefulWidget {
@@ -45,7 +46,7 @@ class _PolicyPage extends State<PolicyPage> {
                 padding: const EdgeInsets.symmetric(
                     horizontal: 20.0, vertical: 10.0),
                 child: const TitleNotification(title: 'Policy')),
-            const Gap(10),
+            Gap(AppLayout.getHeight(10)),
             Container(
               margin: const EdgeInsets.only(bottom: 15),
               height: 40.0,
