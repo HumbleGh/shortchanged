@@ -6,7 +6,9 @@ import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/icon_text_icon.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key});
+  const SettingsPage({
+    super.key,
+  });
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
