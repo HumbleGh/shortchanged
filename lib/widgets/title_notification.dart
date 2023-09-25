@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shortchanged/pages/notification_page.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class TitleNotification extends StatelessWidget {
@@ -15,10 +16,18 @@ class TitleNotification extends StatelessWidget {
           title,
           style: Styles.headLineStyle1,
         ),
-        SvgPicture.asset(
-          'assets/icons/Notification.svg',
-          width: 24.0,
-          height: 24.0,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const NotificationPage()));
+          },
+          child: SvgPicture.asset(
+            'assets/icons/Notification.svg',
+            width: 24.0,
+            height: 24.0,
+          ),
         )
       ],
     );
