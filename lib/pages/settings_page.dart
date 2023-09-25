@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
+import 'package:shortchanged/widgets/icon_text_icon.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -50,6 +51,11 @@ class _SettingsPageState extends State<SettingsPage> {
                   SvgPicture.asset('assets/icons/edit-2.svg')
                 ],
               ),
+              Gap(AppLayout.getHeight(20)),
+              const IconTextIcon(
+                  assetName: 'assets/icons/NotificationBold.svg',
+                  title: 'Device Notification',
+                  subtitle: 'Device Notification, Emails & Updates')
             ],
           ),
         ),

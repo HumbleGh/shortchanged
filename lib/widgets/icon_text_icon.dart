@@ -5,7 +5,15 @@ import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class IconTextIcon extends StatelessWidget {
-  const IconTextIcon({super.key});
+  // ignore: prefer_typing_uninitialized_variables
+  final assetName;
+  final String subtitle;
+  final String title;
+  const IconTextIcon(
+      {super.key,
+      required this.assetName,
+      required this.title,
+      required this.subtitle});
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +22,31 @@ class IconTextIcon extends StatelessWidget {
       children: [
         Row(
           children: [
-            const CircleAvatar(
-              radius: 30,
+            SvgPicture.asset(
+              assetName,
+              width: AppLayout.getHeight(24),
+              height: AppLayout.getHeight(24),
             ),
             Gap(AppLayout.getHeight(12)),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Humble Osei',
-                  style: Styles.headLineStyle2,
+                  title,
+                  style: Styles.headLineStyle3,
                 ),
-                const Text('humbleosei@gmail.com')
+                Text(
+                  subtitle,
+                  style: const TextStyle(color: Colors.grey),
+                ),
               ],
             ),
           ],
         ),
-        SvgPicture.asset('assets/icons/edit-2.svg')
+        const Icon(
+          Icons.arrow_forward_ios,
+          color: Colors.grey,
+        ),
       ],
     );
   }
