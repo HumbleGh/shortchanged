@@ -11,9 +11,6 @@ class SupportScreen extends StatefulWidget {
 
 class _SupportScreen extends State<SupportScreen> {
   bool first = false;
-  bool second = true;
-  bool third = false;
-  bool fourth = true;
 
   @override
   Widget build(BuildContext context) {

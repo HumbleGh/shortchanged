@@ -46,7 +46,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ],
                 ),
               ),
-              Switch(
+              Switch.adaptive(
                 // This bool value toggles the switch.
                 value: first,
                 activeColor: Colors.green,
@@ -80,7 +80,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ],
                 ),
               ),
-              Switch(
+              Switch.adaptive(
                 // This bool value toggles the switch.
                 value: second,
                 activeColor: Colors.green,
@@ -114,7 +114,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ],
                 ),
               ),
-              Switch(
+              Switch.adaptive(
                 // This bool value toggles the switch.
                 value: third,
                 activeColor: Colors.green,
@@ -148,7 +148,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   ],
                 ),
               ),
-              Switch(
+              Switch.adaptive(
                 // This bool value toggles the switch.
                 value: fourth,
                 activeColor: Colors.green,
