@@ -58,6 +58,17 @@ class _SupportScreen extends State<SupportScreen> {
             ],
           ),
           Gap(AppLayout.getHeight(20)),
+          const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [Text('data'), Text('data')],
+              ),
+              Text('data'),
+              Text('data')
+            ],
+          )
         ]),
       ),
     );
