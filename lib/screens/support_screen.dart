@@ -63,10 +63,22 @@ class _SupportScreen extends State<SupportScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                children: [Text('data'), Text('data')],
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Languages',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'English',
+                    style: TextStyle(color: Colors.grey),
+                  )
+                ],
               ),
-              Text('data'),
-              Text('data')
+              Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey,
+              )
             ],
           )
         ]),
