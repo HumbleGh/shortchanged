@@ -11,9 +11,9 @@ class NotificationScreen extends StatefulWidget {
 
 class _NotificationScreenState extends State<NotificationScreen> {
   bool first = false;
-  bool second = true;
+  bool second = false;
   bool third = false;
-  bool fourth = true;
+  bool fourth = false;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             vertical: AppLayout.getHeight(20)),
         child: Column(children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Expanded(
@@ -60,6 +61,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
           Gap(AppLayout.getHeight(20)),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Expanded(
@@ -93,6 +95,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
           Gap(AppLayout.getHeight(20)),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Expanded(
@@ -126,6 +129,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
           Gap(AppLayout.getHeight(20)),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Expanded(
@@ -133,7 +137,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'TUser reactions to comment',
+                      'User reactions to comment',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
