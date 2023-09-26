@@ -16,7 +16,23 @@ class _SupportScreenState extends State<SupportScreen> {
         title: const Text('Accessibility'),
       ),
       body: Container(
-          padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20))),
+        padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+        child: const Row(children: [
+          Expanded(
+              child: Column(
+            children: [
+              Text(
+                'Show text to speech',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              Text('data')
+            ],
+          ))
+        ]),
+      ),
     );
   }
 }
