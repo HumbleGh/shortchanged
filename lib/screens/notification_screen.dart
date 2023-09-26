@@ -10,9 +10,9 @@ class NotificationScreen extends StatefulWidget {
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
-  bool first = true;
+  bool first = false;
   bool second = true;
-  bool third = true;
+  bool third = false;
   bool fourth = true;
 
   @override

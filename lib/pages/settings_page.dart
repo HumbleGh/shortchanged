@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/notification_screen.dart';
+import 'package:shortchanged/screens/support_screen.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/icon_text_icon.dart';
@@ -71,10 +72,18 @@ class _SettingsPageState extends State<SettingsPage> {
                     subtitle: 'Device Notification, Emails & Updates'),
               ),
               Gap(AppLayout.getHeight(30)),
-              const IconTextIcon(
-                  assetName: 'assets/icons/ChatBold.svg',
-                  title: 'Support',
-                  subtitle: 'Talk to our technical team'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SupportScreen()));
+                },
+                child: const IconTextIcon(
+                    assetName: 'assets/icons/ChatBold.svg',
+                    title: 'Support',
+                    subtitle: 'Talk to our technical team'),
+              ),
             ],
           ),
         ),
