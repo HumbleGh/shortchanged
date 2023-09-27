@@ -89,6 +89,19 @@ class _SettingsPageState extends State<SettingsPage> {
                           builder: (context) => const SupportScreen()));
                 },
                 child: const IconTextIcon(
+                    assetName: 'assets/icons/magic-star.svg',
+                    title: 'Accessibility',
+                    subtitle: 'Customise App to your needs'),
+              ),
+              Gap(AppLayout.getHeight(30)),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SupportScreen()));
+                },
+                child: const IconTextIcon(
                     assetName: 'assets/icons/ChatBold.svg',
                     title: 'Support',
                     subtitle: 'Talk to our technical team'),
