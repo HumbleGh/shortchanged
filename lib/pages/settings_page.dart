@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/screens/complains_screen.dart';
 import 'package:shortchanged/screens/notification_screen.dart';
 import 'package:shortchanged/screens/profile_screen.dart';
 import 'package:shortchanged/screens/support_screen.dart';
@@ -99,7 +100,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SupportScreen()));
+                          builder: (context) => const ComplainsScreen()));
                 },
                 child: const IconTextIcon(
                     assetName: 'assets/icons/ChatBold.svg',
