@@ -126,6 +126,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               )
             ],
           ),
+
           const Gap(20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
