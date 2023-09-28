@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:shortchanged/pages/notification_page.dart';
 import 'package:shortchanged/screens/news_screen.dart';
 import 'package:shortchanged/utils/app_layout.dart';
+import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/large_news_card.dart';
 import 'package:shortchanged/widgets/small_news_card.dart';
 
@@ -18,27 +19,33 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('News'), centerTitle: false, actions: [
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: ((context) => const NotificationPage()),
-              ),
-            );
-          },
-          child: Container(
-            height: 24,
-            width: 24,
-            margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
-            child: SvgPicture.asset(
-              'assets/icons/Notification.svg',
-              height: 18,
-            ),
+      appBar: AppBar(
+          title: Text(
+            'News',
+            style: Styles.headLineStyle1,
           ),
-        )
-      ]),
+          centerTitle: false,
+          actions: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const NotificationPage()),
+                  ),
+                );
+              },
+              child: Container(
+                height: 24,
+                width: 24,
+                margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
+                child: SvgPicture.asset(
+                  'assets/icons/Notification.svg',
+                  height: 18,
+                ),
+              ),
+            )
+          ]),
       body: ListView(
         children: [
           Column(
@@ -49,7 +56,7 @@ class _NewsPageState extends State<NewsPage> {
               Container(
                 height: 47,
                 width: double.infinity,
-                margin: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                 ),
