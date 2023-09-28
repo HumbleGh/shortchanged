@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/pages/notification_page.dart';
+import 'package:shortchanged/utils/app_layout.dart';
+import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/poll_card.dart';
-import 'package:shortchanged/widgets/title_notification.dart';
 
 class PollsPage extends StatefulWidget {
   const PollsPage({super.key});
@@ -14,11 +17,40 @@ class _PollsPageState extends State<PollsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: Container(
+            padding: const EdgeInsets.only(left: 5),
+            child: Text(
+              'Polls',
+              style: Styles.headLineStyle1,
+            ),
+          ),
+          centerTitle: false,
+          actions: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => const NotificationPage()),
+                  ),
+                );
+              },
+              child: Container(
+                height: 24,
+                width: 24,
+                margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
+                child: SvgPicture.asset(
+                  'assets/icons/Notification.svg',
+                  height: 18,
+                ),
+              ),
+            )
+          ]),
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            child: const TitleNotification(title: 'Polls'),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
           ),
           const PollCard(),
           const Gap(20),
