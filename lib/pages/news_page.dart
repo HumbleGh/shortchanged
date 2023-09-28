@@ -20,9 +20,12 @@ class _NewsPageState extends State<NewsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-            'News',
-            style: Styles.headLineStyle1,
+          title: Container(
+            padding: const EdgeInsets.only(left: 5),
+            child: Text(
+              'News',
+              style: Styles.headLineStyle1,
+            ),
           ),
           centerTitle: false,
           actions: [
