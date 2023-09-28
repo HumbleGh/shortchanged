@@ -12,7 +12,10 @@ class _ComplainsScreenState extends State<ComplainsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Complaints & Suggestions'),
+        title: const Text(
+          'Complaints & Suggestions',
+        ),
+        centerTitle: true,
       ),
     );
   }
