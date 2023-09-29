@@ -20,6 +20,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Notifications'),
+        centerTitle: true,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(

@@ -16,6 +16,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile'),
+        centerTitle: true,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
