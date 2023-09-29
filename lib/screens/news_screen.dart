@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
+import 'package:shortchanged/widgets/comment_card.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
@@ -18,7 +20,7 @@ class _NewsScreenState extends State<NewsScreen> {
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            height: 200,
+            height: AppLayout.getHeight(200),
             width: double.infinity,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: ClipRRect(
@@ -67,7 +69,7 @@ class _NewsScreenState extends State<NewsScreen> {
                           height: 16,
                           width: 16,
                           // ignore: deprecated_member_use
-                          color: Colors.grey,
+                          color: Colors.blue,
                         ),
                         const Gap(4),
                         const Text('800')
@@ -78,28 +80,19 @@ class _NewsScreenState extends State<NewsScreen> {
                       children: [
                         SvgPicture.asset(
                           'assets/icons/dislike.svg',
+
                           height: 16,
                           width: 16,
                           // ignore: deprecated_member_use
-                          color: Colors.grey,
+                          color: Colors.red,
                         ),
                         const Gap(4),
                         const Text('800')
                       ],
                     ),
                     const Gap(8),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/icons/Chat.svg',
-                          height: 16,
-                          width: 16,
-                          // ignore: deprecated_member_use
-                          color: Colors.grey,
-                        ),
-                        const Gap(4),
-                        const Text('120')
-                      ],
+                    const Row(
+                      children: [CommentCard(), Gap(4), Text('120')],
                     ),
                   ],
                 )

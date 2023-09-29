@@ -40,7 +40,7 @@ class PollCard extends StatelessWidget {
           const OptionCard(option: 'I don\'t care'),
           const Gap(10),
           const Text(
-            '500 votes, 10 closes in 10 days',
+            '500 votes, closes in 10 days',
             style: TextStyle(color: Colors.grey),
           )
         ],
