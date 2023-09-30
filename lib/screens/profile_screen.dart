@@ -19,7 +19,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         centerTitle: true,
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: EdgeInsets.symmetric(
+            horizontal: AppLayout.getHeight(20),
+            vertical: AppLayout.getHeight(20)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
