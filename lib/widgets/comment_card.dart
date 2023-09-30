@@ -15,7 +15,7 @@ class CommentCard extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return SizedBox(
-                  height: 800,
+                  height: AppLayout.getHeight(800),
                   child: Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: AppLayout.getHeight(20)),
@@ -69,7 +69,8 @@ class CommentCard extends StatelessWidget {
                                   padding: EdgeInsets.symmetric(
                                       horizontal: AppLayout.getHeight(20)),
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
+                                    borderRadius: BorderRadius.circular(
+                                        AppLayout.getHeight(50)),
                                     border: Border.all(
                                         width: 1, color: Colors.grey.shade300),
                                     color: Colors.transparent,
