@@ -91,7 +91,7 @@ class Comment extends StatelessWidget {
           Divider(
             color: Colors.grey.shade300,
           ),
-          Gap(AppLayout.getHeight(10)),
+          Gap(AppLayout.getHeight(12)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
