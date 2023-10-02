@@ -19,7 +19,7 @@ class _NewsScreenState extends State<NewsScreen> {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
             height: AppLayout.getHeight(200),
             width: double.infinity,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
@@ -34,7 +34,7 @@ class _NewsScreenState extends State<NewsScreen> {
           const Gap(12),
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
