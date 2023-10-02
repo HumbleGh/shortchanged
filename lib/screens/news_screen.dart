@@ -75,7 +75,7 @@ class _NewsScreenState extends State<NewsScreen> {
                         const Text('800')
                       ],
                     ),
-                    const Gap(8),
+                    Gap(AppLayout.getHeight(8)),
                     Row(
                       children: [
                         SvgPicture.asset(
