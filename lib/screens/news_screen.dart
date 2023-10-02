@@ -66,8 +66,8 @@ class _NewsScreenState extends State<NewsScreen> {
                       children: [
                         SvgPicture.asset(
                           'assets/icons/like.svg',
-                          height: 16,
-                          width: 16,
+                          height: AppLayout.getHeight(16),
+                          width: AppLayout.getHeight(16),
                           // ignore: deprecated_member_use
                           color: Colors.blue,
                         ),
