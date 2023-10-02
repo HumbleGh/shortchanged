@@ -71,7 +71,7 @@ class _NewsScreenState extends State<NewsScreen> {
                           // ignore: deprecated_member_use
                           color: Colors.blue,
                         ),
-                        const Gap(4),
+                        Gap(AppLayout.getHeight(4)),
                         const Text('800')
                       ],
                     ),
@@ -81,16 +81,16 @@ class _NewsScreenState extends State<NewsScreen> {
                         SvgPicture.asset(
                           'assets/icons/dislike.svg',
 
-                          height: 16,
-                          width: 16,
+                          height: AppLayout.getHeight(16),
+                          width: AppLayout.getHeight(16),
                           // ignore: deprecated_member_use
                           color: Colors.red,
                         ),
-                        const Gap(4),
+                        Gap(AppLayout.getHeight(4)),
                         const Text('800')
                       ],
                     ),
-                    const Gap(8),
+                    Gap(AppLayout.getHeight(8)),
                     const Row(
                       children: [CommentCard(), Gap(4), Text('120')],
                     ),
