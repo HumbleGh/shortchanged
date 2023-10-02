@@ -44,10 +44,10 @@ class _NewsScreenState extends State<NewsScreen> {
                       'Ghana',
                       style: TextStyle(color: Colors.blue, fontSize: 10),
                     ),
-                    const Gap(4),
+                    Gap(AppLayout.getHeight(4)),
                     Container(
-                      width: 4.0,
-                      height: 4.0,
+                      width: AppLayout.getHeight(4.0),
+                      height: AppLayout.getHeight(4.0),
                       decoration: const BoxDecoration(
                           color: Colors.grey, shape: BoxShape.circle),
                     ),
