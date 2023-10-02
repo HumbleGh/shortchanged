@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       // Use GetMaterialApp instead of MaterialApp
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Shortchanged',
       theme: ThemeData(
         useMaterial3: true,
       ),
