@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/notification_card.dart';
 
@@ -25,8 +26,8 @@ class _NotificationPageState extends State<NotificationPage> {
             onPressed: () {},
             icon: SvgPicture.asset(
               'assets/icons/edit-2.svg',
-              width: 24,
-              height: 24,
+              width: AppLayout.getHeight(24),
+              height: AppLayout.getHeight(24),
             ),
           )
         ],
@@ -36,28 +37,30 @@ class _NotificationPageState extends State<NotificationPage> {
           children: [
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: const Column(
+              padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(20),
+                  vertical: AppLayout.getHeight(20)),
+              child: Column(
                 children: [
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
-                  Gap(20),
-                  NotificationCard(),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
+                  Gap(AppLayout.getHeight(20)),
+                  const NotificationCard(),
                 ],
               ),
             ),
