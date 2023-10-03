@@ -64,13 +64,15 @@ class _HomePage extends State<HomePage> {
                     },
                     child: SizedBox(
                       child: Container(
-                        margin: const EdgeInsets.only(left: 10.0),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0,
-                          vertical: 10.0,
+                        margin:
+                            EdgeInsets.only(left: AppLayout.getHeight(10.0)),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getHeight(10.0),
+                          vertical: AppLayout.getHeight(10.0),
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50.0),
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(50)),
                           color: _currentIndex == index
                               ? Colors.blue
                               : Colors.grey.shade200,
@@ -78,7 +80,7 @@ class _HomePage extends State<HomePage> {
                             color: _currentIndex == index
                                 ? Colors.blue
                                 : Colors.grey.shade200,
-                            width: 1.0,
+                            width: AppLayout.getHeight(1.0),
                           ),
                         ),
                         child: Align(
