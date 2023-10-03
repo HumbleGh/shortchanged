@@ -43,13 +43,14 @@ class _PolicyPage extends State<PolicyPage> {
         body: Column(
           children: [
             Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 10.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getHeight(20.0),
+                    vertical: AppLayout.getHeight(10.0)),
                 child: const TitleNotification(title: 'Policy')),
             Gap(AppLayout.getHeight(10)),
             Container(
-              margin: const EdgeInsets.only(bottom: 15),
-              height: 40.0,
+              margin: EdgeInsets.only(bottom: AppLayout.getHeight(15.0)),
+              height: AppLayout.getHeight(40.0),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: tabTitles.length,
@@ -62,13 +63,15 @@ class _PolicyPage extends State<PolicyPage> {
                     },
                     child: SizedBox(
                       child: Container(
-                        margin: const EdgeInsets.only(left: 10.0),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0,
-                          vertical: 10.0,
+                        margin:
+                            EdgeInsets.only(left: AppLayout.getHeight(10.0)),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getHeight(15),
+                          vertical: AppLayout.getHeight(10),
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50.0),
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(50)),
                           color: _currentIndex == index
                               ? Colors.blue
                               : Colors.grey.shade200,
@@ -76,7 +79,7 @@ class _PolicyPage extends State<PolicyPage> {
                             color: _currentIndex == index
                                 ? Colors.blue
                                 : Colors.grey.shade200,
-                            width: 1.0,
+                            width: AppLayout.getHeight(1.0),
                           ),
                         ),
                         child: Align(
