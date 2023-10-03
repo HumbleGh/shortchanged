@@ -5,6 +5,7 @@ import 'package:shortchanged/screens/education_content.dart';
 import 'package:shortchanged/screens/health_content.dart';
 import 'package:shortchanged/screens/politics_content.dart';
 import 'package:shortchanged/screens/sports_content.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/widgets/title_notification.dart';
 
 class HomePage extends StatefulWidget {
@@ -49,8 +50,8 @@ class _HomePage extends State<HomePage> {
             ),
             const Gap(10),
             Container(
-              margin: const EdgeInsets.only(bottom: 15),
-              height: 40.0,
+              margin: EdgeInsets.only(bottom: AppLayout.getHeight(15.0)),
+              height: AppLayout.getHeight(40.0),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: tabTitles.length,
