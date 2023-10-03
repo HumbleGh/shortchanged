@@ -21,7 +21,7 @@ class _NewsPageState extends State<NewsPage> {
     return Scaffold(
       appBar: AppBar(
           title: Container(
-            padding: const EdgeInsets.only(left: 5),
+            padding: EdgeInsets.only(left: AppLayout.getHeight(5.0)),
             child: Text(
               'News',
               style: Styles.headLineStyle1,
@@ -39,12 +39,12 @@ class _NewsPageState extends State<NewsPage> {
                 );
               },
               child: Container(
-                height: 24,
-                width: 24,
+                height: AppLayout.getHeight(24),
+                width: AppLayout.getHeight(24),
                 margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
                 child: SvgPicture.asset(
                   'assets/icons/Notification.svg',
-                  height: 18,
+                  height: AppLayout.getHeight(18),
                 ),
               ),
             )
@@ -54,14 +54,16 @@ class _NewsPageState extends State<NewsPage> {
           Column(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
               ),
               Container(
                 height: 47,
                 width: double.infinity,
-                margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                margin: EdgeInsets.fromLTRB(AppLayout.getHeight(20), 0,
+                    AppLayout.getHeight(20), AppLayout.getHeight(20)),
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(20),
                 ),
                 decoration: BoxDecoration(
                     color: Colors.grey.shade100,
