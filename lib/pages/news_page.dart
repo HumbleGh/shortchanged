@@ -68,7 +68,9 @@ class _NewsPageState extends State<NewsPage> {
                 decoration: BoxDecoration(
                     color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(width: 1, color: Colors.grey.shade400)),
+                    border: Border.all(
+                        width: AppLayout.getHeight(1.0),
+                        color: Colors.grey.shade400)),
                 child: TextField(
                     cursorColor: const Color(0x3C3D4000),
                     decoration: InputDecoration(
@@ -98,7 +100,7 @@ class _NewsPageState extends State<NewsPage> {
                   children: [SmallNewsCard(int: 1), SmallNewsCard(int: 2)],
                 ),
               ),
-              const Gap(20),
+              Gap(AppLayout.getHeight(20)),
               const LargeNewsCard()
             ],
           ),
