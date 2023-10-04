@@ -19,7 +19,7 @@ class _PollsPageState extends State<PollsPage> {
     return Scaffold(
       appBar: AppBar(
           title: Container(
-            padding: const EdgeInsets.only(left: 5),
+            padding: EdgeInsets.only(left: AppLayout.getHeight(5)),
             child: Text(
               'Polls',
               style: Styles.headLineStyle1,
@@ -37,8 +37,8 @@ class _PollsPageState extends State<PollsPage> {
                 );
               },
               child: Container(
-                height: 24,
-                width: 24,
+                height: AppLayout.getHeight(24),
+                width: AppLayout.getHeight(24),
                 margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
                 child: SvgPicture.asset(
                   'assets/icons/Notification.svg',
@@ -50,7 +50,9 @@ class _PollsPageState extends State<PollsPage> {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getHeight(20),
+            ),
           ),
           const PollCard(),
           const Gap(20),
