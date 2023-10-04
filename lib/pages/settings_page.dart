@@ -24,7 +24,9 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getHeight(20),
+              vertical: AppLayout.getHeight(10)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,19 +34,19 @@ class _SettingsPageState extends State<SettingsPage> {
                 'Settings',
                 style: Styles.headLineStyle1.copyWith(color: Colors.black),
               ),
-              Gap(AppLayout.getHeight(20)),
+              Gap(AppLayout.getHeight(AppLayout.getHeight(20))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
-                        radius: 30,
-                        child: Icon(
+                      CircleAvatar(
+                        radius: AppLayout.getHeight(30),
+                        child: const Icon(
                           Icons.person,
                         ),
                       ),
-                      Gap(AppLayout.getHeight(12)),
+                      Gap(AppLayout.getHeight(AppLayout.getHeight(12))),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
