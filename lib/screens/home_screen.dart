@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/signin_screen.dart';
 import 'package:shortchanged/screens/signup_screen.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,10 +14,10 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       children: [
-        const SizedBox(
-          height: 500,
-          width: 200,
-          child: Image(
+        SizedBox(
+          height: AppLayout.getHeight(500),
+          width: AppLayout.getHeight(200),
+          child: const Image(
             image: AssetImage('assets/images/allthree.png'),
           ),
         ),
