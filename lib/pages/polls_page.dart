@@ -42,7 +42,7 @@ class _PollsPageState extends State<PollsPage> {
                 margin: EdgeInsets.only(right: AppLayout.getHeight(20)),
                 child: SvgPicture.asset(
                   'assets/icons/Notification.svg',
-                  height: 18,
+                  height: AppLayout.getHeight(18),
                 ),
               ),
             )
@@ -55,9 +55,9 @@ class _PollsPageState extends State<PollsPage> {
             ),
           ),
           const PollCard(),
-          const Gap(20),
+          Gap(AppLayout.getHeight(20)),
           const PollCard(),
-          const Gap(20),
+          Gap(AppLayout.getHeight(20)),
           const PollCard()
         ],
       ),
