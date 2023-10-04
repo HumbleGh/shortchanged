@@ -43,8 +43,8 @@ class HomeScreen extends StatelessWidget {
             );
           },
           child: Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: 20,
+            padding: EdgeInsets.symmetric(
+              vertical: AppLayout.getHeight(20),
             ),
             decoration: BoxDecoration(
               color: Colors.blue,
