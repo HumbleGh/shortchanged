@@ -93,9 +93,9 @@ class _NewsScreenState extends State<NewsScreen> {
                     Gap(AppLayout.getHeight(8)),
                     Row(
                       children: [
-                        CommentCard(),
+                        const CommentCard(),
                         Gap(AppLayout.getHeight(4)),
-                        Text('120')
+                        const Text('120')
                       ],
                     ),
                   ],
@@ -103,15 +103,16 @@ class _NewsScreenState extends State<NewsScreen> {
               ],
             ),
           ),
-          const Divider(
-            height: 20,
-            indent: 20,
-            endIndent: 20,
+          Divider(
+            height: AppLayout.getHeight(20),
+            indent: AppLayout.getHeight(20),
+            endIndent: AppLayout.getHeight(20),
           ),
           Column(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
                 child: const Text(
                     "Programme: The Project to Improve"
                     " the Quality and Outcomes of Education for All in Mali",
