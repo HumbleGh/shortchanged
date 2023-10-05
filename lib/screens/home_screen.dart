@@ -69,12 +69,12 @@ class HomeScreen extends StatelessWidget {
             );
           },
           child: Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: 16,
+            padding: EdgeInsets.symmetric(
+              vertical: AppLayout.getHeight(16),
             ),
             decoration: BoxDecoration(
               border: Border.all(),
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(6)),
             ),
             child: Text(
               'Sign in',
