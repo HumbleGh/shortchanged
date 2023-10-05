@@ -91,8 +91,12 @@ class _NewsScreenState extends State<NewsScreen> {
                       ],
                     ),
                     Gap(AppLayout.getHeight(8)),
-                    const Row(
-                      children: [CommentCard(), Gap(4), Text('120')],
+                    Row(
+                      children: [
+                        CommentCard(),
+                        Gap(AppLayout.getHeight(4)),
+                        Text('120')
+                      ],
                     ),
                   ],
                 )
