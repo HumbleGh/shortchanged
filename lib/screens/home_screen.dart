@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           'Aenean neque porta feu',
           textAlign: TextAlign.center,
         ),
-        const Gap(40),
+        Gap(AppLayout.getHeight(40)),
         GestureDetector(
           onTap: () {
             // Navigate to the signup page
