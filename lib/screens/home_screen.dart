@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        const Gap(20),
+        Gap(AppLayout.getHeight(20)),
         GestureDetector(
           onTap: () {
             // Navigate to the Signin Page
