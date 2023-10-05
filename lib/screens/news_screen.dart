@@ -119,7 +119,8 @@ class _NewsScreenState extends State<NewsScreen> {
                     style: TextStyle(fontSize: 16)),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
                 child: const Text(
                     "The current funding module of the "
                     "Free Senior High School policy is not "
