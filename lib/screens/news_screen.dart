@@ -24,7 +24,7 @@ class _NewsScreenState extends State<NewsScreen> {
             width: double.infinity,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
               child: Image.asset(
                 'assets/images/medium1.jpg',
                 fit: BoxFit.cover,
@@ -51,7 +51,7 @@ class _NewsScreenState extends State<NewsScreen> {
                       decoration: const BoxDecoration(
                           color: Colors.grey, shape: BoxShape.circle),
                     ),
-                    const Gap(4),
+                    Gap(AppLayout.getHeight(4)),
 
                     // The date goes here
                     const Text(
