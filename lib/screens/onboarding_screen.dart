@@ -72,12 +72,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               );
                             },
                             child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 20,
+                              padding: EdgeInsets.symmetric(
+                                vertical: AppLayout.getHeight(20),
                               ),
                               decoration: BoxDecoration(
                                 color: Colors.blue,
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(
+                                    AppLayout.getHeight(12)),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -87,7 +88,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     style: Styles.headLineStyle3
                                         .copyWith(color: Colors.white),
                                   ),
-                                  const Gap(10),
+                                  Gap(AppLayout.getHeight(10)),
                                   const Icon(
                                     Icons.arrow_forward,
                                     color: Colors.white,
@@ -106,12 +107,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               );
                             },
                             child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 20,
+                              padding: EdgeInsets.symmetric(
+                                vertical: AppLayout.getHeight(20),
                               ),
                               decoration: BoxDecoration(
                                 color: Colors.blue,
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(
+                                    AppLayout.getHeight(12)),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
