@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/home_screen.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/utils/onboarding_content.dart';
 
@@ -40,12 +41,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(30)),
                   ),
-                  height: 300,
+                  height: AppLayout.getHeight(300),
                   width: double.infinity,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 20,
+                    padding: EdgeInsets.symmetric(
+                      vertical: AppLayout.getHeight(20),
+                      horizontal: AppLayout.getHeight(20),
                     ),
                     child: Column(
                       children: [
