@@ -75,7 +75,7 @@ class CommentCard extends StatelessWidget {
                                         width: 1, color: Colors.grey.shade300),
                                     color: Colors.transparent,
                                   ),
-                                  height: 50,
+                                  height: AppLayout.getHeight(50),
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
