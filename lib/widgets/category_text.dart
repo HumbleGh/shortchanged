@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 
 class CategoryText extends StatelessWidget {
   final String text;
@@ -13,8 +14,10 @@ class CategoryText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 10),
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
+      margin: EdgeInsets.only(left: AppLayout.getHeight(10)),
+      padding: EdgeInsets.symmetric(
+          horizontal: AppLayout.getHeight(14),
+          vertical: AppLayout.getHeight(13)),
       decoration: BoxDecoration(
           color: containerColor, borderRadius: BorderRadius.circular(50)),
       child: Text(
