@@ -54,7 +54,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           contents[i].title,
                           style: Styles.headLineStyle1,
                         ),
-                        const Gap(10),
+                        Gap(AppLayout.getHeight(10)),
                         Text(
                           contents[i].description,
                           textAlign: TextAlign.center,
