@@ -123,7 +123,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     style: Styles.headLineStyle3
                                         .copyWith(color: Colors.white),
                                   ),
-                                  const Gap(10),
+                                  Gap(AppLayout.getHeight(10)),
                                   const Icon(
                                     Icons.arrow_forward,
                                     color: Colors.white,
