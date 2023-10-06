@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/widgets/policy_tile.dart';
 
 class PolicyAllContent extends StatefulWidget {
@@ -13,14 +14,14 @@ class _PolicyAllContent extends State<PolicyAllContent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(children: const [
-        Gap(20),
-        PolicyTile(
+      body: ListView(children: [
+        Gap(AppLayout.getHeight(20)),
+        const PolicyTile(
           news: 'The Programme of Cooperation between...',
           title: 'Cooperation Mali-UNICEF',
         ),
-        Gap(20),
-        PolicyTile(
+        Gap(AppLayout.getHeight(20)),
+        const PolicyTile(
           news: 'The Programme of Cooperation between...',
           title: 'Cooperation Mali-UNICEF',
         ),
