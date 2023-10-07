@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SmallNewsCard extends StatelessWidget {
@@ -13,20 +14,20 @@ class SmallNewsCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 140,
+          height: AppLayout.getHeight(140),
           width: 170,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
             child: Image(
               image: AssetImage('assets/images/small$int.jpg'),
               fit: BoxFit.cover, // You can adjust the fit as needed
             ),
           ),
         ),
-        const Gap(4),
+        Gap(AppLayout.getHeight(4)),
         const Text(
           'News Title goes here',
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -37,7 +38,7 @@ class SmallNewsCard extends StatelessWidget {
               'Ghana',
               style: Styles.headLineStyle4.copyWith(color: Colors.blue),
             ),
-            const Gap(10),
+            Gap(AppLayout.getHeight(10)),
             const Text(
               '4mins ago',
               style: TextStyle(color: Colors.grey),
