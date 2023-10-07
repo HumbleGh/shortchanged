@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class MediumNewsCard extends StatelessWidget {
@@ -10,25 +11,25 @@ class MediumNewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: AppLayout.getHeight(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 140,
-            width: 246,
+            height: AppLayout.getHeight(140),
+            width: AppLayout.getHeight(246),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(10)),
               child: Image(
                 image: AssetImage('assets/images/medium$int.jpg'),
                 fit: BoxFit.cover, // You can adjust the fit as needed
               ),
             ),
           ),
-          const Gap(8),
+          Gap(AppLayout.getHeight(8)),
           Text(
             'News Content Goes Here',
             style: Styles.headLineStyle3,
@@ -39,7 +40,7 @@ class MediumNewsCard extends StatelessWidget {
                 'Ghana',
                 style: Styles.headLineStyle4.copyWith(color: Colors.blue),
               ),
-              const Gap(10),
+              Gap(AppLayout.getHeight(10)),
               const Text(
                 '18th March, 2023',
                 style: TextStyle(color: Colors.grey),
