@@ -42,7 +42,7 @@ class LargeNewsCard extends StatelessWidget {
                 'Ghana',
                 style: Styles.headLineStyle4.copyWith(color: Colors.blue),
               ),
-              const Gap(10),
+              Gap(AppLayout.getHeight(10)),
               const Text(
                 '18th March, 2023',
                 style: TextStyle(color: Colors.grey),
