@@ -79,7 +79,7 @@ class CommentCard extends StatelessWidget {
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
-                                        hintText: 'Add a comment...',
+                                        hintText: 'Add a comment',
                                         hintStyle: TextStyle(
                                             color: Colors.grey.shade300)),
                                   ),
