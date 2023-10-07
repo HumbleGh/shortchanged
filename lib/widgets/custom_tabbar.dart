@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shortchanged/screens/sports_content.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 
 class CustomTabBar extends StatefulWidget {
   const CustomTabBar({Key? key}) : super(key: key);
@@ -43,13 +44,13 @@ class _CustomTabBarState extends State<CustomTabBar> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      margin: const EdgeInsets.all(5),
+      margin: EdgeInsets.all(AppLayout.getHeight(5)),
       child: Column(
         children: [
           /// CUSTOM TABBAR
           SizedBox(
             width: double.infinity,
-            height: 60,
+            height: AppLayout.getHeight(60),
             child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemCount: items.length,
@@ -64,19 +65,23 @@ class _CustomTabBarState extends State<CustomTabBar> {
                           });
                         },
                         child: AnimatedContainer(
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppLayout.getHeight(15)),
                           duration: const Duration(milliseconds: 300),
-                          margin: const EdgeInsets.all(5),
+                          margin: EdgeInsets.all(AppLayout.getHeight(5)),
                           // width: 80,
-                          height: 45,
+                          height: AppLayout.getHeight(45),
                           decoration: BoxDecoration(
                             color:
                                 current == index ? Colors.blue : Colors.white54,
                             borderRadius: current == index
-                                ? BorderRadius.circular(50)
-                                : BorderRadius.circular(50),
+                                ? BorderRadius.circular(AppLayout.getHeight(50))
+                                : BorderRadius.circular(
+                                    AppLayout.getHeight(50)),
                             border: current == index
-                                ? Border.all(color: Colors.blue, width: 2)
+                                ? Border.all(
+                                    color: Colors.blue,
+                                    width: AppLayout.getHeight(2))
                                 : null,
                           ),
                           child: Center(
@@ -98,7 +103,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
 
           /// MAIN BODY
           Container(
-            margin: const EdgeInsets.only(top: 30),
+            margin: EdgeInsets.only(top: AppLayout.getHeight(30)),
             width: double.infinity,
             height: double.infinity,
             child: Column(
