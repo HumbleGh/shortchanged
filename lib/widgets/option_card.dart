@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 
 class OptionCard extends StatelessWidget {
   final String option;
@@ -8,11 +9,13 @@ class OptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(
+          horizontal: AppLayout.getHeight(20),
+          vertical: AppLayout.getHeight(16)),
       decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Colors.grey.shade300),
-          borderRadius: BorderRadius.circular(6)),
+          borderRadius: BorderRadius.circular(AppLayout.getHeight(6))),
       child: Text(option),
     );
   }

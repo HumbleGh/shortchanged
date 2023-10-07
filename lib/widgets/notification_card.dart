@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class NotificationCard extends StatelessWidget {
@@ -13,9 +14,9 @@ class NotificationCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          height: 40,
-          width: 40,
+          padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(10)),
+          height: AppLayout.getHeight(40),
+          width: AppLayout.getHeight(40),
           decoration:
               BoxDecoration(color: Colors.blue.shade50, shape: BoxShape.circle),
           child: SvgPicture.asset(
@@ -24,7 +25,7 @@ class NotificationCard extends StatelessWidget {
             color: Colors.blue.shade500,
           ),
         ),
-        const Gap(16),
+        Gap(AppLayout.getHeight(16)),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
