@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/signin_screen.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -15,10 +16,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      height: 50,
+      margin: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+      height: AppLayout.getHeight(50),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6),
+          borderRadius: BorderRadius.circular(AppLayout.getHeight(6)),
           border: Border.all(color: Colors.black)),
     );
     return Scaffold(
@@ -26,9 +27,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-            width: 150,
-            height: 150,
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getHeight(20),
+                horizontal: AppLayout.getHeight(40)),
+            width: AppLayout.getHeight(150),
+            height: AppLayout.getHeight(150),
             child: const Image(image: AssetImage('assets/images/Logo.png')),
           ),
           // const Gap(10),
@@ -47,17 +50,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
           Column(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: const Row(
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('First Name*'),
-                        Gap(5),
+                        const Text('First Name*'),
+                        Gap(AppLayout.getHeight(5)),
                         SizedBox(
-                          width: 180,
+                          width: AppLayout.getHeight(180),
                           child: TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
