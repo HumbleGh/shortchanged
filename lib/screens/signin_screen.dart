@@ -65,9 +65,9 @@ class SignInScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        width: 260,
-                        child: TextField(
+                      SizedBox(
+                        width: AppLayout.getHeight(260),
+                        child: const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'Mobile Number',
@@ -82,10 +82,13 @@ class SignInScreen extends StatelessWidget {
             const Spacer(),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(8)),
+              margin: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(20),
+                  vertical: AppLayout.getHeight(8)),
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(AppLayout.getHeight(8))),
               child: MaterialButton(
                 onPressed: () {
                   Navigator.push(
