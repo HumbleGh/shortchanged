@@ -148,11 +148,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 60,
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
+                    borderRadius: BorderRadius.circular(AppLayout.getHeight(4)),
                     border: Border.all(
-                      width: 0.5,
+                      width: AppLayout.getHeight(0.5),
                     )),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
                 child: DropdownButton<String>(
                   isExpanded: true,
                   value: dropdownValue,
@@ -185,7 +186,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               )
             ],
           ),
-          const Gap(20),
+          Gap(AppLayout.getHeight(20)),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
