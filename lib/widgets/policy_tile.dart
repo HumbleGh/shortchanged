@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class PolicyTile extends StatelessWidget {
@@ -11,7 +12,7 @@ class PolicyTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

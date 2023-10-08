@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/screens/signup_screen.dart';
 import 'package:shortchanged/screens/verification_screen.dart';
+import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -15,10 +16,9 @@ class SignInScreen extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            Container(
-              height: 100,
+            SizedBox(
+              height: AppLayout.getHeight(100),
               width: 100,
-              padding: const EdgeInsets.symmetric(horizontal: 0),
               child: const Image(
                 image: AssetImage('assets/images/Logo.png'),
                 fit: BoxFit.cover,
@@ -35,9 +35,10 @@ class SignInScreen extends StatelessWidget {
                 style: Styles.headLineStyle4,
               ),
             ),
-            const Gap(40),
+            Gap(AppLayout.getHeight(40)),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding:
+                  EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -51,7 +52,7 @@ class SignInScreen extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                            border: Border.all(width: 1),
+                            border: Border.all(width: AppLayout.getHeight(1)),
                             borderRadius: BorderRadius.circular(4)),
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 19),
