@@ -62,7 +62,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Gap(AppLayout.getHeight(5)),
                         SizedBox(
                           width: AppLayout.getHeight(180),
-                          child: TextField(
+                          child: const TextField(
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               hintText: 'John',
@@ -74,8 +74,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Last Name*'),
-                        Gap(5),
+                        const Text('Last Name*'),
+                        Gap(AppLayout.getHeight(5)),
                         SizedBox(
                           width: 180,
                           child: TextField(
