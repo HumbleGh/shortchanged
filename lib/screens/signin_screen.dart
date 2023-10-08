@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
           children: [
             SizedBox(
               height: AppLayout.getHeight(100),
-              width: 100,
+              width: AppLayout.getHeight(100),
               child: const Image(
                 image: AssetImage('assets/images/Logo.png'),
                 fit: BoxFit.cover,
@@ -46,7 +46,7 @@ class SignInScreen extends StatelessWidget {
                     'Enter your Mobile Number',
                     style: Styles.textStyle,
                   ),
-                  const Gap(12),
+                  Gap(AppLayout.getHeight(12)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -54,14 +54,15 @@ class SignInScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(width: AppLayout.getHeight(1)),
                             borderRadius: BorderRadius.circular(4)),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 19),
-                        child: const Row(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: AppLayout.getHeight(20),
+                            vertical: AppLayout.getHeight(19)),
+                        child: Row(
                           children: [
-                            Image(
+                            const Image(
                                 image: AssetImage('assets/images/ghflag.png')),
-                            Gap(6),
-                            Icon(Icons.arrow_drop_down),
+                            Gap(AppLayout.getHeight(6)),
+                            const Icon(Icons.arrow_drop_down),
                           ],
                         ),
                       ),
