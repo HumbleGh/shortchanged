@@ -46,8 +46,8 @@ class PolicyDetails extends StatelessWidget {
                   Center(
                     child: Container(
                       margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-                      height: 5,
-                      width: 150,
+                      height: AppLayout.getHeight(5),
+                      width: AppLayout.getHeight(140),
                       decoration: BoxDecoration(
                           color: Colors.grey,
                           borderRadius: BorderRadius.circular(50)),
