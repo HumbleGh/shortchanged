@@ -42,7 +42,7 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: AppLayout.getHeight(20)),
-                          margin: EdgeInsets.only(bottom: 40),
+                          margin: const EdgeInsets.only(bottom: 40),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
