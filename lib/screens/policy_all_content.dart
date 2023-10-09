@@ -42,12 +42,86 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: AppLayout.getHeight(20)),
-                          child: const Column(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Name",
                                 style: TextStyle(color: Colors.grey),
-                              )
+                              ),
+                              Gap(AppLayout.getHeight(8)),
+                              const Text(
+                                'Coopreation Mali-UNICEF',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Gap(AppLayout.getHeight(12)),
+                              const Text(
+                                "Summary",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Gap(AppLayout.getHeight(8)),
+                              const Text(
+                                'The Programme of Cooperation between the Government of Mali and UNICEF (CPD) for the period 2020-2024, based on the life cycle approach (children aged 0-18 years, i.e. 55% of the population of Mali), has been drawn up with a view to taking into account all the deprivations suffered by children aged 0-18 years.',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Gap(AppLayout.getHeight(12)),
+                              const Text(
+                                "Budget (USD)",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Gap(AppLayout.getHeight(8)),
+                              const Text(
+                                '120, 521,473',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Gap(AppLayout.getHeight(12)),
+                              const Text(
+                                "Beneficiaries",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Gap(AppLayout.getHeight(8)),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    height: AppLayout.getHeight(10),
+                                    width: AppLayout.getHeight(10),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius:
+                                            BorderRadius.circular(100)),
+                                  ),
+                                  Gap(AppLayout.getHeight(10)),
+                                  const Text(
+                                    "Malian Children",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                              Gap(AppLayout.getHeight(12)),
+                              const Text(
+                                "Beneficiaries",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                              Gap(AppLayout.getHeight(8)),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: AppLayout.getHeight(10),
+                                    width: AppLayout.getHeight(10),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius:
+                                            BorderRadius.circular(100)),
+                                  ),
+                                  Gap(AppLayout.getHeight(10)),
+                                  const Text(
+                                    "Malian Children",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                              Gap(AppLayout.getHeight(12)),
                             ],
                           ),
                         ),
