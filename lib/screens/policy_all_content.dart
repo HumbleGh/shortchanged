@@ -42,6 +42,7 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: AppLayout.getHeight(20)),
+                          margin: EdgeInsets.only(bottom: 40),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -100,7 +101,7 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                               ),
                               Gap(AppLayout.getHeight(12)),
                               const Text(
-                                "Beneficiaries",
+                                "Objectives",
                                 style: TextStyle(color: Colors.grey),
                               ),
                               Gap(AppLayout.getHeight(8)),
@@ -116,7 +117,7 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                                   ),
                                   Gap(AppLayout.getHeight(10)),
                                   const Text(
-                                    "Malian Children",
+                                    "To strengthen the child’s survival",
                                     style: TextStyle(fontSize: 16),
                                   ),
                                 ],
