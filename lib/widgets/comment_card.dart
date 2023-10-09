@@ -15,7 +15,7 @@ class CommentCard extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return SizedBox(
-                  height: AppLayout.getHeight(800),
+                  // height: AppLayout.getHeight(00),
                   child: Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: AppLayout.getHeight(20)),

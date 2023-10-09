@@ -191,9 +191,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: AppLayout.getHeight(20)),
                   child: const Text('Date of Birth')),
-              const Gap(5),
+              Gap(AppLayout.getHeight(5)),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextField(
