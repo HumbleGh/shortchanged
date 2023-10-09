@@ -43,7 +43,12 @@ class _PolicyAllContent extends State<PolicyAllContent> {
                           padding: EdgeInsets.symmetric(
                               horizontal: AppLayout.getHeight(20)),
                           child: const Column(
-                            children: [Text("Hey Man")],
+                            children: [
+                              Text(
+                                "Name",
+                                style: TextStyle(color: Colors.grey),
+                              )
+                            ],
                           ),
                         ),
                       ))
