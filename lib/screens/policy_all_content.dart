@@ -58,7 +58,7 @@ class PolicyDetails extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.symmetric(
                           horizontal: AppLayout.getHeight(20)),
-                      margin: const EdgeInsets.only(bottom: 40),
+                      margin: EdgeInsets.only(bottom: AppLayout.getHeight(40)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
