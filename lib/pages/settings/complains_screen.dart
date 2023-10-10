@@ -54,7 +54,7 @@ class _ComplainsScreenState extends State<ComplainsScreen> {
               width: AppLayout.getHeight(1.0),
             ),
           ),
-          child: Center(
+          child: const Center(
             child: Text(
               'Suggetions',
             ),
