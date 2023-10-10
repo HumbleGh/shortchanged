@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import Flutter SVG package
-import 'package:shortchanged/pages/home_page.dart';
-import 'package:shortchanged/pages/news_page.dart';
-import 'package:shortchanged/pages/policy_page.dart';
-import 'package:shortchanged/pages/polls_page.dart';
-import 'package:shortchanged/pages/settings_page.dart';
+import 'package:shortchanged/pages/home/home_page.dart';
+import 'package:shortchanged/pages/news/news_page.dart';
+import 'package:shortchanged/pages/policy/policy_page.dart';
+import 'package:shortchanged/pages/polls/polls_page.dart';
+import 'package:shortchanged/pages/settings/settings_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
