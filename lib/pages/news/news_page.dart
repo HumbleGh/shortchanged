@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:shortchanged/pages/notification_page.dart';
-import 'package:shortchanged/screens/news_screen.dart';
+import 'package:shortchanged/pages/news/news_screen.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';
 import 'package:shortchanged/widgets/large_news_card.dart';

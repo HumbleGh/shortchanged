@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/screens/coding_content.dart';
-import 'package:shortchanged/screens/education_content.dart';
-import 'package:shortchanged/screens/health_content.dart';
-import 'package:shortchanged/screens/policy_all_content.dart';
-import 'package:shortchanged/screens/politics_content.dart';
+import 'package:shortchanged/pages/home/coding_content.dart';
+import 'package:shortchanged/pages/home/education_content.dart';
+import 'package:shortchanged/pages/home/health_content.dart';
+import 'package:shortchanged/pages/policy/policy_all_content.dart';
+import 'package:shortchanged/pages/home/politics_content.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/widgets/title_notification.dart';
 

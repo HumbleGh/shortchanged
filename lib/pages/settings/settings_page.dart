@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/screens/complains_screen.dart';
+import 'package:shortchanged/pages/settings/complains_screen.dart';
 import 'package:shortchanged/screens/notification_screen.dart';
-import 'package:shortchanged/screens/profile_screen.dart';
+import 'package:shortchanged/pages/settings/profile_screen.dart';
 import 'package:shortchanged/screens/support_screen.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 import 'package:shortchanged/utils/app_style.dart';

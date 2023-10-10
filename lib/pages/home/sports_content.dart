@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:shortchanged/pages/news_page.dart';
-import 'package:shortchanged/pages/policy_page.dart';
-import 'package:shortchanged/pages/polls_page.dart';
+import 'package:shortchanged/pages/news/news_page.dart';
+import 'package:shortchanged/pages/policy/policy_page.dart';
+import 'package:shortchanged/pages/polls/polls_page.dart';
 import 'package:shortchanged/widgets/double_text.dart';
 import 'package:shortchanged/widgets/large_news_card.dart';
 import 'package:shortchanged/widgets/medium_news_card.dart';
