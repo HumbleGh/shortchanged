@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shortchanged/screens/sports_content.dart';
+import 'package:shortchanged/pages/home/sports_content.dart';
 import 'package:shortchanged/utils/app_layout.dart';
 
 class CustomTabBar extends StatefulWidget {
