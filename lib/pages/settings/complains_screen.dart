@@ -1,66 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:shortchanged/pages/settings/conplaints.dart';
-import 'package:shortchanged/pages/settings/suggestions.dart';
-import 'package:shortchanged/utils/app_layout.dart';
 
-class ComplainsScreen extends StatefulWidget {
+class ComplainsScreen extends StatelessWidget {
   const ComplainsScreen({super.key});
 
   @override
-  State<ComplainsScreen> createState() => _ComplainsScreenState();
-}
-
-class _ComplainsScreenState extends State<ComplainsScreen> {
-  final List<Widget> tabContents = [
-    const Complaints(),
-    const Suggestions(),
-  ];
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Complaints & Suggestions',
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Complaints & Suggestions'),
         ),
-        centerTitle: true,
-      ),
-      body: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        GestureDetector(
-          onTap: () {
-            setState(() {});
-          },
-          child: Container(
-            height: 50,
-            width: 134,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-              color: Colors.blue,
-              border: Border.all(
-                color: Colors.blue,
-                width: AppLayout.getHeight(1.0),
+        body: Column(
+          children: [
+            Material(
+              child: Container(
+                color: Colors.white,
+                height: 70,
+                width: double.infinity,
+                child: TabBar(
+                    physics: const ClampingScrollPhysics(),
+                    padding: const EdgeInsets.only(
+                        top: 10, left: 10, right: 10, bottom: 10),
+                    unselectedLabelColor: Colors.blue,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    indicator: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.blue),
+                    tabs: [
+                      Tab(
+                        child: Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: const Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Complaints",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: const Align(
+                            alignment: Alignment.center,
+                            child: Text("Suggestions"),
+                          ),
+                        ),
+                      ),
+                    ]),
               ),
-            ),
-          ),
+            )
+          ],
         ),
-        Container(
-          height: 50,
-          width: 134,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-            color: Colors.blue,
-            border: Border.all(
-              color: Colors.grey,
-              width: AppLayout.getHeight(1.0),
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'Suggetions',
-            ),
-          ),
-        ),
-      ]),
+      ),
     );
   }
 }
