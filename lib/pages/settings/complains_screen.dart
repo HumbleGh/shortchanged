@@ -5,6 +5,13 @@ class ComplainsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Complains & Suport'),
+      ),
+      body: Center(
+        child: Text('Hey Man'),
+      ),
+    );
   }
 }
