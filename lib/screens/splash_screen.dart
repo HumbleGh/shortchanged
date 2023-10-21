@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shortchanged/widgets/bottom_navbar.dart';
+import 'package:shortchanged/screens/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       // Navigate to the next screen
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const BottomNavBar()),
+        MaterialPageRoute(builder: (context) => const OnBoardingScreen()),
       );
     });
   }
